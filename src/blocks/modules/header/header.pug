@@ -1,0 +1,32 @@
+-
+    const lists = [
+        {
+            text: 'Екатеринбург, Крауля, 68'
+        },
+        {
+            text: 'пн | ср | пт - с 9:00 до 18:00'
+        },
+        {
+            text: 'вт | чт - с 9:00 до 20:00'
+        },
+        {
+            text: '+7 (343) 237-26-06',
+            icon: 'img/svg/phone-icon.svg'
+        },
+        {
+            text: '+7 (982) 761-59-61',
+            icon: 'img/svg/whatsapp-icon.svg'
+        }
+    ]
+
+header.header
+    .header__container.container
+        .header__list
+            each list in lists
+                if list.icon
+                    .header__list-item
+                        img.header__list-icon(src=list.icon)
+                        | #{list.text}
+                else
+                    .header__list-item= list.text
+

@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "TT Drigs Trial";
+    src:
+        local("TT Drigs Trial Bold"),
+        url("../fonts/TTDrugsTrial/TT-Drugs-Trial-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+}

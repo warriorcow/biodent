@@ -1,0 +1,6 @@
+mixin button(tag, text, view)
+    if tag === 'a'
+      a.button(href='/', class=`${view ? `button__${view}` : ''}`) #{text}
+
+    else
+      #{tag}.button(class=`${view ? `button__${view}` : ''}`) #{text}
