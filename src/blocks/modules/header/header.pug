@@ -11,11 +11,11 @@
         },
         {
             text: '+7 (343) 237-26-06',
-            icon: 'img/svg/phone-icon.svg'
+            icon: 'img/sprites/sprite.svg#phone-icon'
         },
         {
             text: '+7 (982) 761-59-61',
-            icon: 'img/svg/whatsapp-icon.svg'
+            icon: 'img/sprites/sprite.svg#whatsapp-icon'
         }
     ]
 
@@ -25,7 +25,8 @@ header.header
             each list in lists
                 if list.icon
                     .header__list-item
-                        img.header__list-icon(src=list.icon)
+                        svg.header__list-icon
+                            use(href=list.icon)
                         | #{list.text}
                 else
                     .header__list-item= list.text

@@ -1,11 +1,12 @@
 extends layouts/default
-include helpers/mixins
+include ../blocks/components/components
 
 block variables
     - const title = "gulp-pug-starter"
 
 block content
-    include ../blocks/components/banner/banner
+    include ../blocks/modules/banner/banner
+    include ../blocks/modules/services/services
     include ../blocks/modules/footer/footer
 
 block scripts

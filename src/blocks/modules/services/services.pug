@@ -1,0 +1,60 @@
+-
+    const services = {
+        title: 'Услуги',
+        items: [
+            {
+                name: 'Диагностика',
+                image: 'img/services.webp',
+                imageActive: 'img/services-active.webp',
+                href: '/'
+            },
+            {
+                name: 'Диагностика',
+                image: 'img/services.webp',
+                imageActive: 'img/services-active.webp',
+                href: '/'
+            },
+            {
+                name: 'Диагностика',
+                image: 'img/services.webp',
+                imageActive: 'img/services-active.webp',
+                href: '/'
+            },
+            {
+                name: 'Диагностика',
+                image: 'img/services.webp',
+                imageActive: 'img/services-active.webp',
+                href: '/'
+            },
+            {
+                name: 'Диагностика',
+                image: 'img/services.webp',
+                imageActive: 'img/services-active.webp',
+                href: '/'
+            },
+            {
+                name: 'Диагностика',
+                image: 'img/services.webp',
+                imageActive: 'img/services-active.webp',
+                href: '/'
+            },
+            {
+                name: 'Диагностика',
+                image: 'img/services.webp',
+                imageActive: 'img/services-active.webp',
+                href: '/'
+            }
+        ]
+    }
+
+section.services.container
+    .services__wrapper
+        .services__item.services__item--title= services.title
+        each service in services.items
+            a.services__item(data-service, href=service.href)
+                .services__image
+                    img(src=service.image)
+                .services__image.services__image--hover
+                    img(src=service.imageActive)
+                .services__name= service.name
+

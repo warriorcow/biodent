@@ -71,6 +71,7 @@
   &__content {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
     height: 100%;
     z-index: 2;
@@ -92,7 +93,8 @@
   }
 
   &__content-logo {
-    display: inline-flex;
-    justify-content: center;
+    max-width: 400px;
+    width: 100%;
+    height: 68px;
   }
 }

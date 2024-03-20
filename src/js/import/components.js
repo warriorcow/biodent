@@ -1,1 +1,1 @@
-import '%components%/banner/banner';
+
