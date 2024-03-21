@@ -5,7 +5,7 @@
   padding: 15px 10px;
   max-width: 295px;
   width: 100%;
-  background-color: #438BFF;
+  background-color: $blue;
   cursor: pointer;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
@@ -13,15 +13,15 @@
   text-decoration: none;
   font-size: 16px;
   line-height: 1;
-  color: #EFEFEF;
+  color: $dirtyWhite;
 
   &__transparent {
-    border: 2px solid #EFEFEF;
+    border: 2px solid $dirtyWhite;
     background-color: transparent;
   }
 
   &__light {
-    background-color: #EFEFEF;
-    color: #04041C;
+    background-color: $dirtyWhite;
+    color: $deepBlack;
   }
 }

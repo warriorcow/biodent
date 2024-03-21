@@ -1,0 +1,97 @@
+.footer {
+  background-image: url('../img/footer-bg.png');
+  background-size: 100% 101%;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: $dirtyWhite;
+
+  &__top {
+    display: flex;
+    width: 100%;
+    padding: 76px 0 101px;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-right: 123px;
+    }
+  }
+
+  &__logo {
+    margin-right: 44px;
+    width: 166px;
+    height: 27px;
+  }
+
+  &__link {
+    @include fontMontserrat16;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-bottom: 46px;
+    }
+  }
+
+  &__subtitle {
+    @include fontMontserrat14;
+
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    @include fontMontserrat16;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__social-media {
+    display: flex;
+    gap: 0 20px;
+  }
+
+  &__social-item {
+    display: flex;
+    width: 31px;
+    height: 24px;
+  }
+
+  &__bottom {
+    display: flex;
+    border-top: 2px solid $white;
+  }
+
+  &__copyright {
+    @include fontMontserrat16;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    padding: 29px 0 36px;
+  }
+
+  &__copyright-item {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__copyright-logo {
+    display: inline-flex;
+    width: 60px;
+    height: 23px;
+    margin-left: 10px;
+  }
+}

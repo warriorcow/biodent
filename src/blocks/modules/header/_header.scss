@@ -1,5 +1,5 @@
 .header {
-  color: #EFEFEF;
+  color: $dirtyWhite;
   position: absolute;
   top: 0;
   left: 0;
@@ -15,7 +15,7 @@
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: #04041C;
+    background-color: $deepBlack;
     opacity: 0.5;
   }
 
