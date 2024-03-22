@@ -1,0 +1,85 @@
+.slider {
+  $self: &;
+  overflow: visible !important;
+
+  & &__item {
+    &-wrapper {
+      display: flex;
+      height: 500px;
+      background-color: $blue;
+      transition: 300ms;
+      opacity: 0;
+      transform: scale(0.725);
+      transform-origin: top left;
+    }
+
+    &-image {
+      width: 50.5%;
+
+      img {
+        width: 100%;
+        height: calc(100% + 3px);
+        margin-top: -2px;
+        object-fit: cover;
+      }
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+      padding: 25px 25px 40px;
+    }
+
+    &-info {
+      margin-top: auto;
+      margin-bottom: auto;
+      color: $deepBlack;
+    }
+
+    &-title {
+      @include fontTTDrugs24;
+    }
+
+    &-description {
+      @include fontMontserrat14;
+
+      margin-top: 16px;
+    }
+
+    &.swiper-slide-active,
+    &.swiper-slide-prev {
+      #{$self}__item-wrapper {
+        transform: scale(1);
+      }
+    }
+
+    &.swiper-slide-active,
+    &.swiper-slide-next {
+      #{$self}__item-wrapper {
+        opacity: 1;
+      }
+    }
+  }
+
+  & &__navigation {
+    position: absolute;
+    bottom: 15%;
+    right: 0;
+    display: flex;
+    user-select: none;
+    z-index: 1;
+  }
+
+  & &__arrow {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+
+    &-next {
+      transform: rotate(180deg);
+      margin-left: 10px;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+mixin slider(items)
+    div.slider.swiper
+        .swiper-wrapper
+            each item in items
+                .slider__item.swiper-slide
+                    .slider__item-wrapper
+                        .slider__item-image
+                            img(src=item.image)
+                        .slider__item-content
+                            .slider__item-info
+                                .slider__item-title!= item.title
+                                .slider__item-description= item.description
+                            +button('a', 'Подробнее', 'light')
+        .slider__navigation
+            .slider__arrow.slider__arrow-prev
+                svg.slider__arrow-icon
+                    use(href="img/sprites/sprite.svg#arrow-slider")
+            .slider__arrow.slider__arrow-next
+                svg.slider__arrow-icon
+                    use(href="img/sprites/sprite.svg#arrow-slider")

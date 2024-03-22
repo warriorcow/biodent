@@ -18,7 +18,7 @@ $gap-y: 32px;
   &__item {
     display: flex;
     flex-direction: column;
-    width: calc(100% / $count-in-row - $gap-x);
+    flex: 1 0 calc(100% / $count-in-row - $gap-x);
     box-sizing: border-box;
     cursor: pointer;
     text-decoration: none;
