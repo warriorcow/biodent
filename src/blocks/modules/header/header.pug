@@ -19,15 +19,79 @@
         }
     ]
 
+    const navigations = [
+        {
+            name: 'Главная',
+            link: 'Главная'
+        },
+        {
+            name: 'Услуги',
+            nested: [
+                {
+                    name: 'Диагностика',
+                    link: 'Диагностика'
+                },
+                {
+                    name: 'Профилактика',
+                    link: 'Профилактика'
+                },
+                {
+                    name: 'Эстетика',
+                    link: 'Эстетика'
+                },
+                {
+                    name: 'Хирургия',
+                    link: 'Хирургия'
+                },
+                {
+                    name: 'Лечение',
+                    link: 'Лечение'
+                },
+                {
+                    name: 'Протезирование',
+                    link: 'Протезирование'
+                },
+                {
+                    name: 'Детям',
+                    link: 'Детям'
+                }
+            ]
+        },
+        {
+            name: 'Прайс',
+            link: 'Прайс'
+        },
+        {
+            name: 'О клинике',
+            link: 'О клинике'
+        },
+        {
+            name: 'Контакты',
+            link: 'Контакты'
+        }
+    ]
+
 header.header
-    .header__container.container
-        .header__list
-            each list in lists
-                if list.icon
-                    .header__list-item
-                        svg.header__list-icon
-                            use(href=list.icon)
-                        | #{list.text}
-                else
-                    .header__list-item= list.text
+    .header__container
+        .container
+            .header__list
+                each list in lists
+                    if list.icon
+                        .header__list-item
+                            svg.header__list-icon
+                                use(href=list.icon)
+                            | #{list.text}
+                    else
+                        .header__list-item= list.text
+    nav.header__navigation.container
+        ul.header__navigation-list
+            each navigation in navigations
+                li.header__navigation-item(class=navigation.nested ? 'header__navigation-item--with-list' : '')
+                    a(href=navigation.link).header__navigation-name= navigation.name
+                    if navigation.nested
+                        .header__navigation-submenu
+                            ul.header__navigation-submenu-wrapper
+                                each subname in navigation.nested
+                                    li.header__navigation-subname
+                                        a(href=subname.link).header__navigation-sublink= subname.name
 

@@ -3,14 +3,14 @@
   text-align: center;
 
   &__container {
-    height: calc(100% - 75px);
+    height: calc(100% - 72px);
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: 'TT Drigs Trial', sans-serif;
     font-size: 46px;
     line-height: 46px;
-    padding-top: 75px;
+    padding-top: 72px;
   }
 
   &__slider-background {

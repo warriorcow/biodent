@@ -26,6 +26,13 @@
   font-weight: 500;
 }
 
+@mixin fontMontserrat15() {
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
 @mixin fontMontserrat14() {
   font-family: Montserrat, sans-serif;
   font-size: 14px;

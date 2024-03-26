@@ -1,4 +1,6 @@
 .header {
+  $self: &;
+
   color: $dirtyWhite;
   position: absolute;
   top: 0;
@@ -8,25 +10,27 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 
-  &::before {
-    position: absolute;
-    content: '';
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: $deepBlack;
-    opacity: 0.5;
-  }
-
   &__container {
     position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-color: $deepBlack;
+      opacity: 0.5;
+    }
   }
 
   &__list {
+    position: relative;
     display: flex;
     justify-content: space-between;
     padding: 26px 0;
+    z-index: 1;
   }
 
   &__list-item {
@@ -51,5 +55,101 @@
     margin-right: 9px;
     width: 20px;
     height: 20px;
+  }
+
+  &__navigation {
+    @include fontMontserrat15;
+
+    display: flex;
+    justify-content: center;
+    padding: 64px 0;
+  }
+
+  &__navigation-list {
+    display: flex;
+    list-style: none;
+    gap: 0 78px;
+  }
+
+  &__navigation-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    user-select: none;
+
+    &::after {
+      display: none;
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid $dirtyWhite;
+      margin-left: 8px;
+      transition: transform 200ms;
+    }
+
+    &:hover {
+      #{$self}__navigation-submenu {
+        top: 0;
+        opacity: 1;
+        pointer-events: all;
+      }
+
+      &::after {
+        transform: scale(1, -1);
+      }
+    }
+
+    &--with-list {
+      &::after {
+        display: block;
+      }
+    }
+  }
+
+  &__navigation-submenu {
+    opacity: 0;
+    position: absolute;
+    top: -10px;
+    padding-top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    transition: top 200ms, opacity 200ms;
+  }
+
+  &__navigation-submenu-wrapper {
+    position: relative;
+    list-style: none;
+    color: $deepBlack;
+    background-color: $dirtyWhite;
+    padding: 6px 12px 12px;
+
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: -7px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 10px solid $dirtyWhite;
+    }
+  }
+
+  &__navigation-subname {
+    @include fontMontserrat14;
+
+    border-bottom: 2px solid $blue;
+  }
+
+  &__navigation-sublink {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
   }
 }
