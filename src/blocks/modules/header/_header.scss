@@ -152,4 +152,10 @@
     justify-content: center;
     padding: 10px;
   }
+
+  &.open-modal {
+    #{$self}__container {
+      margin-right: 17px;
+    }
+  }
 }

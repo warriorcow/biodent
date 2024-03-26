@@ -3,3 +3,4 @@ document.addEventListener('DOMContentLoaded', () =>{
 });
 
 import '%components%/slider/slider';
+import '%components%/modal/modal';

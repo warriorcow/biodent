@@ -10,6 +10,13 @@ block content
     include ../blocks/modules/team/team
     include ../blocks/modules/footer/footer
 
+block modals
+    +modal('callback')
+        +slot('body') callback
+    +modal('doctor')
+        +slot('body') doctor
+
+
 block scripts
     script(src="js/vendor.js")
     script(src="js/main.js")

@@ -3,6 +3,7 @@
   text-align: center;
 
   &__container {
+    position: relative;
     height: calc(100% - 72px);
     display: flex;
     flex-direction: column;

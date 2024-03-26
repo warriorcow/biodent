@@ -10,7 +10,7 @@ mixin slider(items)
                             .slider__item-info
                                 .slider__item-title!= item.title
                                 .slider__item-description= item.description
-                            +button('a', 'Подробнее', 'light')
+                            +button('button', 'Подробнее', 'light', 'doctor')
         .slider__navigation
             .slider__arrow.slider__arrow-prev
                 svg.slider__arrow-icon

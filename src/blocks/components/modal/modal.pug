@@ -1,0 +1,23 @@
+mixin modal(id)
+    - const slots = {};
+
+    mixin slot(name)
+        - slots[name] = block
+
+    - block ? block() : undefined
+
+    .modal(id=id)
+        .modal__content
+            .modal__close
+                svg
+                    use(href='img/sprites/sprite.svg#cross')
+            if slots['header']
+                .modal__header
+                    - slots['header']();
+            if slots['body']
+                .modal__body
+                    - slots['body']();
+            if slots['footer']
+                .modal__footer
+                    - slots['footer']();
+        .modal__backdrop

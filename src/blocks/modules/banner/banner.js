@@ -8,7 +8,6 @@ new Swiper('.banner__slider', {
     autoplay: {
         delay: 2000
     },
-    loop: true,
     speed: 1000,
     allowTouchMove: false,
     pagination: {
