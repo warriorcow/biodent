@@ -1,6 +1,6 @@
 mixin button(tag, text, view, modal)
     if tag === 'a'
-      a.button(href='/', class=`${view ? `button__${view}` : ''}`) #{text}
+      a.button(href='/', class=`${view ? `button__${view}` : ''}`)&attributes(attributes) #{text}
 
     else
-      #{tag}.button(data-modal=modal)(class=`${view ? `button__${view}` : ''}`) #{text}
+      #{tag}.button(data-modal=modal)(class=`${view ? `button__${view}` : ''}`)&attributes(attributes) #{text}

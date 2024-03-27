@@ -79,6 +79,7 @@
     font-size: 24px;
     padding-bottom: 94px;
     padding-top: 195px;
+    box-sizing: border-box;
   }
 
   &__content-actions {
@@ -97,5 +98,6 @@
     max-width: 400px;
     width: 100%;
     height: 68px;
+    fill: $dirtyWhite;
   }
 }

@@ -1,8 +1,8 @@
 body {
-  display: none;
-
-  &.loaded {
-    display: block;
+  &.loading {
+    * {
+      transition: none !important;
+    }
   }
 
   &.open-modal {
