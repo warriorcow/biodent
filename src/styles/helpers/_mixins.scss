@@ -1,3 +1,10 @@
+@mixin fontTTDrugs60() {
+  font-family: 'TT Drigs Trial', sans-serif;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 700;
+}
+
 @mixin fontTTDrugs46() {
   font-family: 'TT Drigs Trial', sans-serif;
   font-size: 46px;
@@ -9,6 +16,13 @@
   font-family: 'TT Drigs Trial', sans-serif;
   font-size: 24px;
   line-height: 29px;
+  font-weight: 700;
+}
+
+@mixin fontMontserrat60() {
+  font-family: Montserrat, sans-serif;
+  font-size: 60px;
+  line-height: 73px;
   font-weight: 700;
 }
 
@@ -37,5 +51,12 @@
   font-family: Montserrat, sans-serif;
   font-size: 14px;
   line-height: 17px;
+  font-weight: 500;
+}
+
+@mixin fontMontserrat12() {
+  font-family: Montserrat, sans-serif;
+  font-size: 12px;
+  line-height: 14px;
   font-weight: 500;
 }

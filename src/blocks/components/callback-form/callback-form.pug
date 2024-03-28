@@ -1,0 +1,11 @@
+mixin callbackForm()
+    .callback-form
+        .callback-form__title Запишитесь на Прием!
+        .callback-form__subtitle Оставьте свои контактные данные, и мы свяжемся с вами для записи на консультацию
+
+        form.callback-form__form
+            +input('Имя')(class='callback-form__input')
+            +input('Телефон', 'tel')(class='callback-form__input')
+            +checkbox('Соглашаюсь с Политикой Конфиденциальности')(class='callback-form__checkbox')
+                 | Соглашаюсь с Политикой Конфиденциальности
+            +button('button', 'Записаться на консультацию', 'light')(class='callback-form__submit')

@@ -1,0 +1,12 @@
+.callback {
+  padding-top: 60px;
+  padding-bottom: 160px;
+  background-image: url('../img/callback-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+
+  &__wrapper {
+    max-width: 738px;
+  }
+}

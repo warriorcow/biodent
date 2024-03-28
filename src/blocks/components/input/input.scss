@@ -1,0 +1,16 @@
+.input {
+  @include fontMontserrat12;
+
+  padding: 10px 20px;
+  border: 2px solid $dirtyWhite;
+  background-color: transparent;
+  color: $dirtyWhite;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: $dirtyWhite;
+  }
+}

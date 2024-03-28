@@ -7,12 +7,15 @@ block variables
 block content
     include ../blocks/modules/banner/banner
     include ../blocks/modules/services/services
-    include ../blocks/modules/team/team
+    include ../blocks/modules/about/about
+    include ../blocks/modules/people/people
+    include ../blocks/modules/callback/callback
     include ../blocks/modules/footer/footer
 
 block modals
     +modal('callback')
-        +slot('body') callback
+        +slot('body')
+            +callbackForm()
     +modal('doctor')
         +slot('body') doctor
 

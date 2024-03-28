@@ -1321,6 +1321,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime-corejs3@npm:^7.23.9":
+  version: 7.24.1
+  resolution: "@babel/runtime-corejs3@npm:7.24.1"
+  dependencies:
+    core-js-pure: "npm:^3.30.2"
+    regenerator-runtime: "npm:^0.14.0"
+  checksum: 10c0/0e2c29c826e324655dc6d2a2c8e4a930f89eff53ee98202cc7ef9168e24236bd85a22aa9c49a7e572088e2fa47e38d54528b58d28b09548ed4d3612a9b33187d
+  languageName: node
+  linkType: hard
+
 "@babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.8.4":
   version: 7.24.0
   resolution: "@babel/runtime@npm:7.24.0"
@@ -4882,6 +4892,13 @@ bem-tools-create@bem-tools/bem-tools-create:
   languageName: node
   linkType: hard
 
+"core-js-pure@npm:^3.30.2":
+  version: 3.36.1
+  resolution: "core-js-pure@npm:3.36.1"
+  checksum: 10c0/b964c7aa35665a4ecd513f62d695d99e96bb9e42621f7fcc823a613fab4155525d5c2875e46fcc4e6a3396c1fb7d543aee8f7afd83aa34531261b30af759c3d6
+  languageName: node
+  linkType: hard
+
 "core-js@npm:^2.4.0":
   version: 2.6.12
   resolution: "core-js@npm:2.6.12"
@@ -8345,6 +8362,7 @@ bem-tools-create@bem-tools/bem-tools-create:
     imagemin-pngquant: "npm:~9.0.0"
     imagemin-webp: "npm:^6.0.0"
     imagemin-zopfli: "npm:^7.0.0"
+    imask: "npm:^7.5.0"
     lint-staged: "npm:^12.3.5"
     node-sass: "npm:^9.0.0"
     postcss: "npm:^8.4.8"
@@ -9101,6 +9119,15 @@ bem-tools-create@bem-tools/bem-tools-create:
     p-pipe: "npm:^3.0.0"
     replace-ext: "npm:^1.0.0"
   checksum: 10c0/13e5de25fe1275d05a948b745b5cc8ca472f69bec895baf32e96e61bbd9c98a065f14a5de8f178ce426e2466780360dbddc9f6024664f3afa551d6390733c40e
+  languageName: node
+  linkType: hard
+
+"imask@npm:^7.5.0":
+  version: 7.5.0
+  resolution: "imask@npm:7.5.0"
+  dependencies:
+    "@babel/runtime-corejs3": "npm:^7.23.9"
+  checksum: 10c0/202d8767d6d0954d1621ffdeb99e56e0761c4f0d6a32ccfe6bf33092d83a80bc55f70086df742c35493a3b1fced67289c240402404b8e208144c8ee24d57e021
   languageName: node
   linkType: hard
 

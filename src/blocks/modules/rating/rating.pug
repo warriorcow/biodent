@@ -1,0 +1,45 @@
+-
+    const ratings = [
+        {
+            logo: 'img/svg/2gis.svg',
+            score: '4,9',
+            stars: 4
+        },
+        {
+            logo: 'img/svg/yandex-map.svg',
+            score: '5,0',
+            stars: 5
+        },
+        {
+            logo: 'img/svg/prodoctorov.svg',
+            score: '4,9',
+            stars: 4
+        }
+    ]
+
+section.rating
+    .container
+        .rating__title Профессиональная стоматология
+        .rating__subtitle Ежедневно получаем положительные отзывы от клиентов
+        .rating__wrapper
+            each rating in ratings
+                .rating__item
+                    .rating__logo
+                        img(src=rating.logo)
+                    .rating__score= rating.score
+                    .rating__stars(data-stars=rating.stars)
+                        .rating__star
+                            svg
+                                use(href="img/sprites/sprite.svg#star")
+                        .rating__star
+                            svg
+                                use(href="img/sprites/sprite.svg#star")
+                        .rating__star
+                            svg
+                                use(href="img/sprites/sprite.svg#star")
+                        .rating__star
+                            svg
+                                use(href="img/sprites/sprite.svg#star")
+                        .rating__star
+                            svg
+                                use(href="img/sprites/sprite.svg#star")

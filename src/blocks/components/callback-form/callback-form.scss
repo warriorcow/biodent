@@ -1,0 +1,42 @@
+.callback-form {
+  display: flex;
+  flex-direction: column;
+  padding: 55px;
+  background-image: url('../img/callback-form-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+
+  &__title {
+    @include fontTTDrugs46;
+
+    color: $dirtyWhite;
+  }
+
+  &__subtitle {
+    @include fontMontserrat16;
+
+    color: $dirtyWhite;
+    margin-top: 14px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  &__checkbox {
+    margin-top: 10px;
+  }
+
+  &__input {
+    &:not(:first-child) {
+      margin-top: 12px;
+    }
+  }
+
+  &__submit {
+    margin-top: 40px;
+  }
+}

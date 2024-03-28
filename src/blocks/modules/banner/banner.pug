@@ -1,31 +1,39 @@
+-
+    const slides = [
+        {
+            title: 'Профессиональная стоматология в Екатеринбурге:',
+            subtitle: 'Клиника Доктора Пыркова',
+            image: 'img/banner-abstract.png'
+        },
+        {
+            title: 'Комфорт и забота на каждом шагу',
+            subtitle: 'Видео-обзор клиники',
+            subtitleLink: '/',
+            image: 'img/banner-doctor.png',
+        }
+    ]
+
 section.banner
     include ../../modules/header/header
     .banner__container
-        .banner__content.container
-            svg.banner__content-logo
+        .banner__logo
+            svg
                 use(href="img/sprites/sprite.svg#biodent")
-            .banner__content-actions
-                .banner__pagination
-                .banner__buttons
-                    +button('button', 'О клинике', 'light', 'callback')
-                    +button('a', 'Запись на прием', 'transparent')
+        .banner__actions
+            .banner__pagination
+            .banner__buttons
+                +button('button', 'О клинике', 'light', 'callback')
+                +button('a', 'Запись на прием', 'transparent')
+
         .banner__slider-background
             .banner__slider.swiper
                 .swiper-wrapper
-                    .banner__slide.swiper-slide
-                        .banner__slide-content.container
-                            | Профессиональная Стоматология в Екатеринбурге:
-                        img.banner__slide-image(src='https://wallpapers.com/images/featured/space-sjryfre8k8f6i3ge.jpg')
-                    .banner__slide.swiper-slide
-                        .banner__slide-content.container
-                            | Профессиональная Стоматология в Екатеринбурге:
-                        img.banner__slide-image(src='https://wallpapersmug.com/download/1920x1080/8d554d/celestial-world-digital-art-space-colorful.jpg')
-                    .banner__slide.swiper-slide
-                        .banner__slide-content.container
-                            | Профессиональная Стоматология в Екатеринбурге:
-                        img.banner__slide-image(src='https://getwallpapers.com/wallpaper/full/3/0/6/106810.jpg')
-                    .banner__slide.swiper-slide
-                        .banner__slide-content.container
-                            | Профессиональная Стоматология в Екатеринбурге:
-                        img.banner__slide-image(src='https://4kwallpapers.com/images/wallpapers/astronaut-black-hole-deep-space-universe-cosmos-surreal-1920x1080-6743.jpg')
-
+                    each slide in slides
+                        .banner__slide.swiper-slide
+                            .banner__slide-content.container
+                                .banner__title= slide.title
+                                if slide.subtitleLink
+                                    a.banner__subtitle.banner__subtitle--link(href=slide.subtitleLink)= slide.subtitle
+                                else
+                                    .banner__subtitle= slide.subtitle
+                            img.banner__slide-image(src=slide.image)

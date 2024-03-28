@@ -1,0 +1,44 @@
+.checkbox {
+  $self: &;
+
+  display: flex;
+  align-items: flex-start;
+
+
+  &__custom-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 17px;
+    width: 17px;
+    height: 17px;
+    border: 2px solid $dirtyWhite;
+  }
+
+  &__label {
+    @include fontMontserrat12;
+
+    margin-left: 10px;
+    margin-top: 5px;
+    color: $dirtyWhite;
+  }
+
+  &__input {
+    display: none;
+
+    &:checked {
+      + #{$self}__custom-input {
+        &::before {
+          display: block;
+          content: '';
+          width: 13px;
+          height: 8px;
+          background-image: url('../img/svg/check.svg');
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+        }
+      }
+    }
+  }
+}

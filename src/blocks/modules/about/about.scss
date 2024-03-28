@@ -1,0 +1,73 @@
+.about {
+  display: flex;
+  margin-top: 130px;
+
+  &__title {
+    @include fontTTDrugs46;
+
+    line-height: 69px;
+    padding-bottom: 43px;
+  }
+
+  &__container {
+    display: flex;
+    padding: 54px 0 70px;
+    border-bottom: 2px solid $blue;
+    border-top: 2px solid $blue;
+  }
+
+  &__button {
+    margin-top: 30px;
+    margin-bottom: 45px;
+    height: 54px;
+  }
+
+  &__section-left {
+    margin-right: 85px;
+    flex: 1 0 540px;
+  }
+
+  &__section-right {
+    > :first-child {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__text {
+    &--small {
+      @include fontMontserrat14;
+    }
+    &--medium {
+      @include fontMontserrat16;
+    }
+    &--large {
+      @include fontMontserrat24;
+    }
+  }
+
+  &__year {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+
+  &__digit {
+    @include fontTTDrugs60;
+  }
+
+  &__statistics {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px 10px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+  }
+
+  &__statistics-item {
+    display: flex;
+    flex-direction: column;
+    gap: 25px 0;
+    max-width: 136px;
+  }
+}
