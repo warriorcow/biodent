@@ -1,17 +1,17 @@
 -
     const ratings = [
         {
-            logo: 'img/svg/2gis.svg',
+            logo: 'img/sprites/sprite.svg#2gis',
             score: '4,9',
             stars: 4
         },
         {
-            logo: 'img/svg/yandex-map.svg',
+            logo: 'img/sprites/sprite.svg#yandex-map',
             score: '5,0',
             stars: 5
         },
         {
-            logo: 'img/svg/prodoctorov.svg',
+            logo: 'img/sprites/sprite.svg#prodoctorov',
             score: '4,9',
             stars: 4
         }
@@ -25,7 +25,8 @@ section.rating
             each rating in ratings
                 .rating__item
                     .rating__logo
-                        img(src=rating.logo)
+                        svg
+                            use(href=rating.logo)
                     .rating__score= rating.score
                     .rating__stars(data-stars=rating.stars)
                         .rating__star

@@ -7,6 +7,8 @@ new Swiper('.slider', {
     modules: [Autoplay, Navigation],
     slidesPerView: 1.74,
     spaceBetween: 40,
+    speed: 1000,
+    autoHeight: true,
     watchSlidesProgress: true,
     loop: true,
     navigation: {
