@@ -12,15 +12,6 @@ block content
     include ../blocks/modules/callback/callback
     include ../blocks/modules/footer/footer
 
-block modals
-    +modal('callback')
-        +slot('body')
-            +callbackForm()
-    +modal('doctor')(class='open', style="display: flex")
-        +slot('body')
-            include ../blocks/modules/more-about-doctor/more-about-doctor
-
-
 block scripts
     script(src="js/vendor.js")
     script(src="js/main.js")

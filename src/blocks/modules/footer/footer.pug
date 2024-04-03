@@ -81,3 +81,9 @@ footer.footer
                 a.footer__copyright-logo(href="https://inesi-agensy.ru/", target="_blank")
                     svg
                         use(href="img/sprites/sprite.svg#inesi")
+    +modal('callback')
+        +slot('body')
+            +callbackForm()
+    +modal('doctor')
+        +slot('body')
+            include ../more-about-doctor/more-about-doctor

@@ -1,0 +1,20 @@
+.breadcrumbs {
+  @include fontMontserrat15;
+
+  display: flex;
+  align-items: center;
+
+  &__item {
+    color: $white;
+
+    &:not(:first-child)::before {
+      content: '/';
+      padding: 0 5px;
+      color: $white;
+    }
+
+    &.active {
+      color: $lightblue;
+    }
+  }
+}

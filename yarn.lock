@@ -1577,6 +1577,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fancyapps/ui@npm:^5.0.35":
+  version: 5.0.35
+  resolution: "@fancyapps/ui@npm:5.0.35"
+  checksum: 10c0/98ad5177b222f83eb3dc0799bc3620705c2c63796b186bc2a5ec7f9c1468c5f4d1e7ab96712bdf5d39414049e8e66f2f9ad3bfa825ca1ba7fff4780f7340719d
+  languageName: node
+  linkType: hard
+
 "@gar/promisify@npm:^1.0.1, @gar/promisify@npm:^1.1.3":
   version: 1.1.3
   resolution: "@gar/promisify@npm:1.1.3"
@@ -8329,6 +8336,7 @@ bem-tools-create@bem-tools/bem-tools-create:
     "@babel/eslint-parser": "npm:^7.17.0"
     "@babel/preset-env": "npm:^7.16.11"
     "@babel/register": "npm:^7.17.0"
+    "@fancyapps/ui": "npm:^5.0.35"
     babel-loader: "npm:^8.2.3"
     bem-tools-core: bem-tools/bem-tools-core
     bem-tools-create: bem-tools/bem-tools-create

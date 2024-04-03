@@ -2,7 +2,7 @@ mixin slider-small(items)
     div.slider-small.swiper
         .swiper-wrapper
             each item in items
-                .slider-small__item.swiper-slide
+                a.slider-small__item.swiper-slide(href=item, data-fancybox='certificates')
                     img.slider-small__image(src=item)
         .slider-small__navigation
             .slider-small__arrow.slider-small__arrow-prev

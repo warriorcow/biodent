@@ -6,6 +6,8 @@
     padding: 22px 15px;
     box-sizing: border-box;
     user-select: none;
+    border: 2px solid transparent;
+    outline: none;
 
     &::before {
       position: absolute;
@@ -17,6 +19,10 @@
       background-color: $white;
       opacity: .3;
       z-index: -1;
+    }
+
+    &:hover {
+      border-color: $blue;
     }
   }
 
