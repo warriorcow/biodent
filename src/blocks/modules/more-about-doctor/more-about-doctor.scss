@@ -1,0 +1,49 @@
+.more-about-doctor {
+  max-width: 1280px;
+  width: 100%;
+  padding: 65px 70px 40px;
+  box-sizing: border-box;
+  background-image: url('../img/more-about-doctor-bg.png');
+  background-position: bottom left;
+  background-repeat: no-repeat;
+
+  &__body {
+    display: flex;
+  }
+
+  &__image {
+    max-width: 386px;
+  }
+
+  &__info {
+    margin-left: 70px;
+  }
+
+  &__title {
+    @include fontTTDrugs46;
+
+    margin-bottom: 14px;
+  }
+
+  &__subtitle {
+    @include fontMontserrat16;
+
+    margin-bottom: 26px;
+  }
+
+  &__description {
+    @include fontMontserrat14;
+
+    display: flex;
+    flex-direction: column;
+    height: 420px;
+    flex-wrap: wrap;
+    gap: 0 18px;
+    line-height: 18.2px;
+
+    p {
+      width: 333px;
+      margin-top: 0;
+    }
+  }
+}

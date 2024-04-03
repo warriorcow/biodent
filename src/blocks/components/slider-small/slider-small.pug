@@ -1,0 +1,12 @@
+mixin slider-small(items)
+    div.slider-small.swiper
+        .swiper-wrapper
+            each item in items
+                .slider-small__item.swiper-slide
+                    img.slider-small__image(src=item)
+        .slider-small__navigation
+            .slider-small__arrow.slider-small__arrow-prev
+                .slider-small__arrow-icon
+            .slider-small__arrow.slider-small__arrow-next
+                .slider-small__arrow-icon
+

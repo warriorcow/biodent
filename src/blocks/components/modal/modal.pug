@@ -6,7 +6,7 @@ mixin modal(id)
 
     - block ? block() : undefined
 
-    .modal(id=id)
+    .modal(id=id)&attributes(attributes)
         .modal__content
             .modal__close
                 svg

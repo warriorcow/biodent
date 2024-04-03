@@ -16,8 +16,9 @@ block modals
     +modal('callback')
         +slot('body')
             +callbackForm()
-    +modal('doctor')
-        +slot('body') doctor
+    +modal('doctor')(class='open', style="display: flex")
+        +slot('body')
+            include ../blocks/modules/more-about-doctor/more-about-doctor
 
 
 block scripts
