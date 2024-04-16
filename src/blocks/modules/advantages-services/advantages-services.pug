@@ -1,0 +1,36 @@
+-
+    const advantagesServices = [
+        {
+            title: 'Диагностика и планирование',
+            description: 'Перед началом любого лечения мы проводим тщательную диагностику. Наша задача - предоставить вам всю необходимую информацию о состоянии вашего здоровья в доступной форме. Вы будете участвовать в обсуждении плана лечения вместе с нашими специалистами.',
+            icon: 'img/svg/union.svg'
+        },
+        {
+            title: 'Индивидуальный подход',
+            description: 'Понимая, что каждый пациент уникален, мы предлагаем индивидуальные варианты лечения. Обсудив все "за" и "против", мы остановимся на том варианте, который соответствует вашим потребностям, вашему ценовому диапазону и ожиданиям.',
+            icon: 'img/svg/human.svg'
+        },
+        {
+            title: 'Гарантия результата',
+            description: 'Мы гарантируем качество каждой процедуры, используя только современное оборудование и материалы премиум качества.',
+            icon: 'img/svg/guard.svg'
+        },
+        {
+            title: 'Прозрачность и доверие',
+            description: 'Мы предоставляем честную информацию о процессе лечения, его стоимости и прогнозируемых результатах.',
+            icon: 'img/svg/union.svg'
+        }
+    ]
+
+section.advantages-services
+    .container
+        .advantages-services__services
+            each service in advantagesServices
+                .advantages-services__services-item
+                    .advantages-services__services-title!= service.title
+                    .advantages-services__services-description!= service.description
+                    .advantages-services__services-icon
+                        img(src=service.icon)
+        .advantages-services__price
+            +title('Прайс клиники', '', 'light').advantages-services__price-title
+            +description('Доверьте заботу о вашей улыбке опытным специалистам нашей клиники. Мы создали для вас уникальный опыт стоматологического обслуживания, где каждый этап - от диагностики до лечения - нацелен на ваш комфорт и безупречный результат.', 'light', '/')

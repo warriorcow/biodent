@@ -1,0 +1,40 @@
+.description {
+  $self: &;
+
+  padding: 70px 0;
+  border-bottom: 1px solid $blue;
+  border-top: 1px solid $blue;
+
+  &__text {
+    @include fontMontserrat16;
+
+    text-align: center;
+    margin: 0 auto;
+    max-width: 845px;
+  }
+
+  &__button {
+
+  }
+
+  &--with-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+
+    #{$self}__text {
+      text-align: left;
+      max-width: 605px;
+      margin: 0;
+    }
+  }
+
+  &--view {
+    &-light {
+      #{$self}__text {
+        color: $white;
+      }
+    }
+  }
+}

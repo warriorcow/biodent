@@ -1,0 +1,5 @@
+mixin description(text, view, link)
+    .description(class=[link?'description--with-button':'', view?`description--view-${view}`:''])&attributes(attributes)
+        .description__text!= text
+        if link
+            +button('a', 'Прайс на улуги', '').description__button

@@ -1,0 +1,2 @@
+mixin title(text, size, color)
+    .title(class=[size?`title--size-${size}`:'', color?`title--color-${color}`:''])&attributes(attributes)!= text

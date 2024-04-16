@@ -1,0 +1,12 @@
+.title {
+  @include fontTTDrugs46;
+
+  line-height: 69px;
+  color: $deepBlack;
+
+  &--color {
+    &-light {
+      color: $dirtyWhite;
+    }
+  }
+}
