@@ -1,0 +1,19 @@
+-
+    const priceBreadcrumbs = [
+        {
+            name: 'Главная',
+            link: '/'
+        },
+        {
+            name: 'Прайс',
+            active: true
+        }
+    ]
+
+section.price-banner
+    .container
+        .price-banner__header
+            +breadcrumbs(priceBreadcrumbs, 'light')
+        .price-banner__body
+            .price-banner__title Цены на стоматологические услуги
+            .price-banner__subtitle Прайс-лист клиники «Биодент» в Екатеринбурге

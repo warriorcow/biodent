@@ -1,0 +1,15 @@
+.service-competitons {
+  padding-top: 85px;
+  padding-bottom: 155px;
+
+  &__container {
+    &:not(:last-child) {
+      margin-bottom: 135px;
+    }
+  }
+
+  &__title {
+    margin-left: 77px;
+    margin-bottom: 43px;
+  }
+}

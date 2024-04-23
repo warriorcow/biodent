@@ -1,0 +1,47 @@
+.our-services {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    padding: 20px;
+    background-color: #fff;
+  }
+
+  &__checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+    border: 2px solid #04041C;
+    position: relative;
+    box-sizing: border-box;
+
+    &-checkmark {
+      width: 11px;
+      height: 18px;
+      border-bottom: 2px solid #04041C;
+      border-right: 2px solid #04041C;
+      transform: translateY(-3px) rotate(45deg);
+      box-sizing: border-box;
+    }
+  }
+
+  &__title {
+    @include fontTTDrugs24;
+
+    flex-grow: 1;
+  }
+
+  &__description {
+    @include fontMontserrat14;
+
+    max-width: 455px;
+    width: 100%;
+  }
+}

@@ -6,44 +6,6 @@
   background-position: center;
   background-repeat: no-repeat;
 
-  &__services {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-
-    &-item {
-      display: flex;
-      flex-direction: column;
-      border: 2px solid $blue;
-      padding: 35px 25px;
-      flex: 1 0 200px;
-      color: $white;
-    }
-
-    &-title {
-      @include fontTTDrugs24;
-
-      line-height: 24px;
-    }
-
-    &-description {
-      @include fontMontserrat14;
-
-      margin-top: 16px;
-    }
-
-    &-icon {
-      display: inline-flex;
-      margin-top: auto;
-      padding-top: 45px;
-      width: 100%;
-
-      img {
-        margin-left: auto;
-      }
-    }
-  }
-
   &__price {
     margin-top: 88px;
 

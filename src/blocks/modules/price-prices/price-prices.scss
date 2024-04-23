@@ -1,0 +1,38 @@
+.price-prices {
+  padding-bottom: 120px;
+
+  &__container {
+    &:not(:last-child) {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__title {
+    margin-left: 77px;
+    margin-bottom: 40px;
+  }
+
+  &-variants {
+    display: flex;
+    justify-content: space-between;
+
+    &__item {
+      width: 30%;
+    }
+
+    &__icon {
+      margin-bottom: 52px;
+      height: 42px;
+    }
+
+    &__title {
+      @include fontTTDrugs24;
+    }
+
+    &__description {
+      @include fontMontserrat14;
+
+      margin-top: 20px;
+    }
+  }
+}

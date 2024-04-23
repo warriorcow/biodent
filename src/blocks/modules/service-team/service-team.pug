@@ -1,0 +1,28 @@
+-
+    const itemsCustomer = [
+        {
+            title: 'Пырков<br> Сергей Трофимович',
+            description: 'Стоматолог общей практики',
+            image: 'img/doctor.png'
+        },
+        {
+            title: 'Пырков<br> Сергей Трофимович',
+            description: 'Стоматолог общей практики',
+            image: 'img/doctor.png'
+        },
+        {
+            title: 'Пырков<br> Сергей Трофимович',
+            description: 'Стоматолог общей практики',
+            image: 'img/doctor.png'
+        },
+        {
+            title: 'Пырков<br> Сергей Трофимович',
+            description: 'Стоматолог общей практики',
+            image: 'img/doctor.png'
+        }
+    ]
+
+section.services-team
+    .services-team__wrapper.container
+        +title('Команда опытных специалистов', null, 'light').services-team__title
+        +slider(itemsCustomer)

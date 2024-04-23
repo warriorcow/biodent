@@ -1,0 +1,8 @@
+mixin ourServices(items)
+    .our-services
+        each item in items
+            .our-services__item
+                .our-services__checkbox
+                    .our-services__checkbox-checkmark
+                .our-services__title!= item.title
+                .our-services__description!= item.description

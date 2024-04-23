@@ -1,0 +1,18 @@
+.price-banner {
+  padding-top: 200px;
+  padding-bottom: 80px;
+
+  &__body {
+    margin-top: 80px;
+  }
+
+  &__title {
+    @include fontTTDrugs46;
+  }
+
+  &__subtitle {
+    @include fontTTDrugs24;
+
+    margin-top: 12px;
+  }
+}

@@ -1,0 +1,8 @@
+mixin advantages(item)
+    .advantages
+        each service in item
+            .advantages__item
+                .advantages__title!= service.title
+                .advantages__description!= service.description
+                .advantages__icon
+                    img(src=service.icon)

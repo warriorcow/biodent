@@ -1,4 +1,18 @@
 -
+    const servicesBreadcrumbs = [
+        {
+            name: 'Главная',
+            link: '/'
+        },
+        {
+            name: 'Услуги'
+        },
+        {
+            name: 'Профилактика',
+            active: true
+        }
+    ]
+
     const advantagesServices = [
         {
             title: 'Диагностика и планирование',
@@ -22,9 +36,20 @@
         }
     ]
 
-section.advantages-services
+section.service-banner
     .container
-        +advantages(advantagesServices)
-        .advantages-services__price
-            +title('Прайс клиники', '', 'light').advantages-services__price-title
-            +description('Доверьте заботу о вашей улыбке опытным специалистам нашей клиники. Мы создали для вас уникальный опыт стоматологического обслуживания, где каждый этап - от диагностики до лечения - нацелен на ваш комфорт и безупречный результат.', 'light', '/')
+        .service-banner__header
+            +breadcrumbs(servicesBreadcrumbs)
+        .service-banner__body
+            .service-banner__body-left
+                .service-banner__title Забота о ваших зубах
+                .service-banner__subtitle Профессиональная гигиена и профилактика
+                +button('button', 'Записаться на прием', 'light', 'callback')(class='service-banner__button')
+            .service-banner__body-right
+                .service-banner__image
+                    img(src='img/service-banner.png')
+        +description('Доверьте заботу о вашей улыбке опытным специалистам нашей клиники. Мы создали для вас уникальный опыт стоматологического обслуживания, где каждый этап - от диагностики до лечения - нацелен на ваш комфорт и безупречный результат.')
+        .service-banner__advantages
+            +title('4 причины начать лечение в нашей клинике', null, 'light')(class='service-banner__advantages-title')
+            .service-banner__advantages-wrapper
+                +advantages(advantagesServices)

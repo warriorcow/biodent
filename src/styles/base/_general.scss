@@ -1,4 +1,7 @@
 body {
+  background-color: $dirtyWhite;
+  overflow-x: hidden;
+
   &.loading {
     * {
       transition: none !important;
@@ -18,8 +21,10 @@ h1, h2, h3, h4, h5, h6, ul {
 
 .container {
   max-width: 1140px;
+  width: 100%;
   padding: 0 15px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 svg {

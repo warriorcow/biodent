@@ -1,4 +1,4 @@
-mixin breadcrumbs(items)
-    .breadcrumbs
+mixin breadcrumbs(items, theme)
+    .breadcrumbs(class=`${theme ? `breadcrumbs--${theme}` : ''}`)
         each item in items
             a.breadcrumbs__item(href=item.link, class=item.active ? 'active' : '')= item.name

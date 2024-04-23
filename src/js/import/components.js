@@ -6,4 +6,5 @@ import '%components%/slider/slider';
 import '%components%/slider-small/slider-small';
 import '%components%/modal/modal';
 import '%components%/input/input';
+import '%components%/prices/prices';
 

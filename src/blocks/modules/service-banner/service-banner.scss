@@ -1,0 +1,72 @@
+.service-banner {
+  padding-top: 218px;
+  background-image: url('../img/services-banner-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $dirtyWhite;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 80px;
+
+  &__body {
+    display: flex;
+    width: 100%;
+    padding: 0 0 70px;
+    margin: 20px auto 0;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+    &-left {
+      width: 100%;
+      max-width: 600px;
+    }
+  }
+
+  &__title {
+    @include fontTTDrugs46;
+
+    line-height: 46px;
+  }
+
+  &__subtitle {
+    @include fontTTDrugs24;
+
+    margin-top: 13px;
+
+    line-height: 24px;
+  }
+
+  &__image {
+    width: 383px;
+    min-width: 383px;
+    height: 383px;
+    margin-left: 20px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__button {
+    margin-top: 120px;
+  }
+
+  &__advantages {
+    margin-top: 110px;
+
+    &-title {
+      margin-left: 75px;
+      max-width: 650px;
+      line-height: 46px;
+    }
+
+    &-wrapper {
+      margin-top: 40px;
+    }
+  }
+}

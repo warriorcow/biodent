@@ -1,0 +1,95 @@
+.prices {
+  display: flex;
+  flex-direction: column;
+  gap: 20px 0;
+
+  &__item {
+
+    &:last-child {
+      margin-bottom: 0;
+
+      .prices__price:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__title {
+    @include fontTTDrugs24;
+
+    display: flex;
+    justify-content: space-between;
+    background-color: $blue;
+    padding: 20px 25px;
+    color: $white;
+    cursor: pointer;
+
+    &.active {
+      .prices__icon::before {
+        transform: rotate(45deg);
+        margin-top: 2.5px;
+      }
+    }
+  }
+
+  &__icon {
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid $white;
+    position: relative;
+
+    &::before {
+      content: '';
+      transform: rotate(225deg);
+      margin-top: -2.5px;
+      width: 5px;
+      height: 5px;
+      border-left: 2px solid $white;
+      border-top: 2px solid $white;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+    border-color: #000;
+    height: 0;
+    overflow: hidden;
+    transition: height .4s ease-in-out;
+    will-change: height;
+  }
+
+  &__price {
+    @include fontMontserrat16;
+
+    display: flex;
+    justify-content: space-between;
+    background-color: $white;
+    padding: 20px 25px;
+
+    &:first-child {
+      margin-top: 20px;
+    }
+
+    &:not(:last-child) {
+
+    }
+
+    &:last-child {
+      margin-bottom: 30px;
+    }
+
+    &-title {
+      max-width: 615px;
+    }
+
+    &-value {
+
+    }
+  }
+}

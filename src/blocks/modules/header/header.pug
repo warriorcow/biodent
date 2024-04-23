@@ -59,7 +59,36 @@
         },
         {
             name: 'Прайс',
-            link: 'Прайс'
+            nested: [
+                {
+                    name: 'Диагностика',
+                    link: 'Диагностика'
+                },
+                {
+                    name: 'Профилактика',
+                    link: 'Профилактика'
+                },
+                {
+                    name: 'Эстетика',
+                    link: 'Эстетика'
+                },
+                {
+                    name: 'Хирургия',
+                    link: 'Хирургия'
+                },
+                {
+                    name: 'Лечение',
+                    link: 'Лечение'
+                },
+                {
+                    name: 'Протезирование',
+                    link: 'Протезирование'
+                },
+                {
+                    name: 'Детям',
+                    link: 'Детям'
+                }
+            ]
         },
         {
             name: 'О клинике',
@@ -91,7 +120,7 @@ header.header
                         use(href='img/sprites/sprite.svg#biodent')
                 ul.header__navigation-list
                     each navigation in navigations
-                        li.header__navigation-item(class=navigation.nested ? 'header__navigation-item--with-list' : '')
+                        li.header__navigation-item(class=navigation.nested ? 'header__navigation-item--with-list':'')
                             a(href=navigation.link).header__navigation-name= navigation.name
                             if navigation.nested
                                 .header__navigation-submenu

@@ -1,8 +1,24 @@
 .breadcrumbs {
+  $self: &;
+
   @include fontMontserrat15;
 
   display: flex;
   align-items: center;
+
+  &--light {
+    #{$self}__item {
+      color: $deepBlack;
+
+      &:not(:first-child)::before {
+        color: $deepBlack;
+      }
+
+      &.active {
+        color: $blue;
+      }
+    }
+  }
 
   &__item {
     color: $white;

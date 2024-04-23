@@ -1,0 +1,13 @@
+mixin prices(items)
+    .prices
+        each item in items
+            .prices__item
+                .prices__title(class=item.active?'active':'')
+                    != item.title
+                    .prices__icon(class=item.active ? 'active' : '')
+
+                .prices__list(class=item.active?'active':'')
+                    each price in item.prices
+                        .prices__price
+                            .prices__price-title!= price.name
+                            .prices__price-value!= price.price
