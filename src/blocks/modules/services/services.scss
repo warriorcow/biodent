@@ -1,7 +1,3 @@
-$count-in-row: 4;
-$gap-x: 18px;
-$gap-y: 32px;
-
 .services {
   $self: &;
 
@@ -9,16 +5,33 @@ $gap-y: 32px;
   font-weight: 700;
   margin-top: 106px;
 
+  @include below(lg) {
+    margin-top: 72px;
+  }
+
+  @include below(md) {
+    margin-top: 86px;
+  }
+
   &__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: $gap-y $gap-x;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px 18px;
+
+    @include below(lg) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px 13px;
+    }
+
+    @include below(md) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 34px 11px;
+    }
   }
 
   &__item {
     display: flex;
     flex-direction: column;
-    flex: 1 0 calc(100% / $count-in-row - $gap-x);
     box-sizing: border-box;
     cursor: pointer;
     text-decoration: none;
@@ -33,6 +46,19 @@ $gap-y: 32px;
       line-height: 69px;
       padding-right: 32px;
       cursor: default;
+
+      @include below(lg) {
+        @include fontTTDrugs38;
+      }
+
+      @include below(md) {
+        @include fontTTDrugs28;
+
+        grid-column: 1 / span 2;
+        justify-content: flex-start;
+        margin-left: 25px;
+        margin-bottom: 16px;
+      }
     }
 
     &.active {
@@ -53,8 +79,15 @@ $gap-y: 32px;
   &__image {
     display: flex;
     justify-content: center;
-    height: 100%;
-    max-height: 232px;
+    height: 232px;
+
+    @include below(lg) {
+      height: 158px;
+    }
+
+    @include below(md) {
+      height: 150px;
+    }
 
     img {
       width: 100%;
@@ -73,5 +106,13 @@ $gap-y: 32px;
     border-bottom: 2px solid $blue;
     padding: 14px;
     text-align: center;
+
+    @include below(lg) {
+      @include fontTTDrugs20;
+    }
+
+    @include below(md) {
+      @include fontTTDrugs18;
+    }
   }
 }

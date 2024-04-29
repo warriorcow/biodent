@@ -5,20 +5,53 @@
   background-size: 100% 101%;
   background-position: center;
   background-repeat: no-repeat;
-  color: $dirtyWhite;
+
+  @include below(md) {
+    background-size: auto 110%;
+    background-position: 60%;
+  }
 
   &__top {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 30px;
     width: 100%;
     padding: 76px 0 101px;
+    color: $dirtyWhite;
+    box-sizing: border-box;
+
+    @include below(lg) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px 30px;
+      padding: 46px 0 30px;
+    }
+
+    @include below(md) {
+      grid-template-columns: auto auto;
+      justify-content: space-between;
+      gap: 24px 19px;
+      padding: 70px 25px 30px;
+    }
   }
 
   &__column {
     display: flex;
     flex-direction: column;
 
-    &:not(:last-child) {
-      margin-right: 123px;
+    &:first-child {
+      @include below(md) {
+        grid-column: 1 / span 2;
+      }
+    }
+
+    &:last-child {
+      @include below(lg) {
+        grid-column: 3;
+      }
+
+      @include below(md) {
+        grid-column: 2;
+      }
     }
   }
 
@@ -27,13 +60,35 @@
     width: 166px;
     height: 27px;
     fill: $dirtyWhite;
+
+    @include below(md) {
+      margin-bottom: 12px;
+    }
   }
 
   &__link {
+    &:hover {
+      text-decoration: underline;
+    }
+
     @include fontMontserrat16;
+
+    white-space: nowrap;
+
+    @include below(lg) {
+      @include fontMontserrat15;
+    }
+
+    @include below(md) {
+      @include fontMontserrat13;
+    }
 
     &:not(:last-child) {
       margin-bottom: 40px;
+
+      @include below(lg) {
+        margin-bottom: 32px;
+      }
     }
   }
 
@@ -43,6 +98,14 @@
 
     &:not(:last-child) {
       margin-bottom: 46px;
+
+      @include below(lg) {
+        margin-bottom: 24px;
+      }
+
+      @include below(md) {
+        margin-bottom: 29px;
+      }
     }
   }
 
@@ -50,19 +113,51 @@
     @include fontMontserrat14;
 
     margin-bottom: 12px;
+
+    @include below(lg) {
+      @include fontMontserrat13;
+
+      margin-bottom: 11px;
+    }
+
+    @include below(md) {
+      @include fontMontserrat12;
+
+      margin-bottom: 8px;
+    }
   }
 
   &__text {
     @include fontMontserrat16;
 
+    @include below(lg) {
+      @include fontMontserrat15;
+    }
+
+    @include below(md) {
+      @include fontMontserrat14;
+    }
+
     &:not(:last-child) {
       margin-bottom: 10px;
+
+      @include below(lg) {
+        margin-bottom: 5px;
+      }
+
+      @include below(md) {
+        margin-bottom: 6px;
+      }
     }
   }
 
   &__social-media {
     display: flex;
     gap: 0 20px;
+
+    @include below(lg) {
+      margin-top: 24px;
+    }
   }
 
   &__social-item {
@@ -73,8 +168,13 @@
   }
 
   &__bottom {
+    color: $dirtyWhite;
     display: flex;
     border-top: 2px solid $white;
+
+    @include below(lg) {
+      border: none;
+    }
   }
 
   &__copyright {
@@ -85,11 +185,62 @@
     justify-content: space-between;
     width: 100%;
     padding: 29px 0 36px;
+    box-sizing: border-box;
+
+    @include below(lg) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 11px;
+      padding: 21px 15px 27px;
+      border-top: 2px solid $white;
+    }
+
+    @include below(md) {
+      padding: 19px 0;
+    }
   }
 
   &__copyright-item {
     display: flex;
     align-items: baseline;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @include below(lg) {
+      @include fontMontserrat13;
+    }
+
+    @include below(md) {
+      @include fontMontserrat12;
+    }
+
+    &:nth-child(1) {
+      @include below(lg) {
+        order: 2;
+        margin-left: auto;
+      }
+    }
+
+    &:nth-child(2) {
+      @include below(lg) {
+        order: 1;
+      }
+    }
+
+    &:nth-child(3) {
+      @include below(lg) {
+        order: 3;
+      }
+    }
+
+    &:nth-child(4) {
+      @include below(lg) {
+        order: 4;
+        margin-left: auto;
+      }
+    }
   }
 
   &__copyright-logo {

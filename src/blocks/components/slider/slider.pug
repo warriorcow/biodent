@@ -1,4 +1,4 @@
-mixin slider(items, view)
+mixin slider(items, view, without_button)
     div.slider.swiper(class=view ? `slider--${view}`:'')
         .swiper-wrapper
             each item in items
@@ -10,7 +10,8 @@ mixin slider(items, view)
                             .slider__item-info
                                 .slider__item-title!= item.title
                                 .slider__item-description= item.description
-                            +button('button', 'Подробнее', 'light', 'doctor')
+                            if !without_button
+                                +button('button', 'Подробнее', 'light', 'doctor').slider__button
         .slider__navigation
             .slider__arrow.slider__arrow-prev
                 .slider__arrow-icon

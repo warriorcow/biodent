@@ -2,24 +2,55 @@
   $self: &;
   overflow: visible !important;
 
+  @include below(lg) {
+    padding-bottom: 66px !important;
+  }
+
+  @include below(md) {
+    padding-bottom: 53px !important;
+  }
+
   & &__item {
     &-wrapper {
       display: flex;
       overflow: hidden;
       height: 436px;
-      transition: 1000ms;
+      transition: 500ms;
       opacity: 0;
       transform: scale(0.725);
       transform-origin: top left;
+
+      @include below(lg) {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      @include below(md) {
+        flex-direction: column;
+        height: auto;
+      }
     }
 
     &-image {
       width: 50.5%;
 
+      @include below(lg) {
+        width: 347px;
+      }
+
+      @include below(md) {
+        width: 100%;
+        height: 280px;
+      }
+
       img {
         width: calc(100% + 1px);
         height: calc(100% + 1px);
         object-fit: cover;
+
+        @include below(md) {
+          object-position: 0 -20vw;
+        }
       }
     }
 
@@ -30,6 +61,7 @@
       flex: 1;
       padding: 25px 25px 40px;
       background-image: url('../img/slider-bg.png');
+      background-size: cover;
       background-repeat: no-repeat;
       background-position: 0;
       background-color: $white;
@@ -43,12 +75,38 @@
 
     &-title {
       @include fontTTDrugs24;
+
+      @include below(lg) {
+        @include fontTTDrugs20;
+
+        line-height: 24px;
+      }
+
+      @include below(lg) {
+        @include fontTTDrugs18;
+
+        line-height: 21.6px;
+      }
     }
 
     &-description {
       @include fontMontserrat14;
 
       margin-top: 16px;
+
+      @include below(lg) {
+        @include fontMontserrat13;
+
+        line-height: 17px;
+        margin-top: 14px;
+      }
+
+      @include below(md) {
+        @include fontMontserrat12;
+
+        line-height: 15.72px;
+        margin-top: 9px;
+      }
     }
 
     &.swiper-slide-active,
@@ -74,6 +132,17 @@
     user-select: none;
     z-index: 1;
     column-gap: 10px;
+
+    @include below(lg) {
+      bottom: 0;
+    }
+  }
+
+  & &__button {
+    margin-top: 26px;
+    max-width: 132px;
+
+    @include fontMontserrat12;
   }
 
   & &__arrow {
@@ -81,10 +150,16 @@
     height: 32px;
     cursor: pointer;
 
+    @include below(md) {
+      width: 28px;
+      height: 28px;
+    }
+
     &-icon {
       width: 100%;
       height: 100%;
       background-image: url('../img/svg/arrow-slider.svg');
+      background-size: cover;
     }
 
     &-next {

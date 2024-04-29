@@ -2,11 +2,34 @@
   margin: 130px 0 0;
   overflow: hidden;
 
+  @include below(lg) {
+    margin-top: 100px;
+  }
+
+  @include below(md) {
+    margin-top: 86px;
+  }
+
   &__title {
     @include fontTTDrugs46;
 
     color: $dirtyWhite;
     margin-bottom: 40px;
     margin-left: 77px;
+
+    @include below(lg) {
+      @include fontTTDrugs38;
+
+      margin-left: 29px;
+      margin-bottom: 25px;
+    }
+
+    @include below(md) {
+      @include fontTTDrugs28;
+
+      line-height: 30.8px;
+      margin-left: 25px;
+      margin-bottom: 25px;
+    }
   }
 }

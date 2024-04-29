@@ -1,0 +1,44 @@
+mixin header(lists, navigations, without_logo)
+    header.header(class=without_logo?'without_logo':'')
+        .header__mobile
+            a.header__logo(href='/')
+                svg
+                    use(href='img/sprites/sprite.svg#biodent')
+            button.header__hamburger
+        .header__desktop
+            .header__close
+            .header__mobile-menu-wrapper
+                .container
+                    +button('button', 'Записаться на прием', 'transparent', 'callback')(class='header__mobile-button')
+                .header__container
+                    .container
+                        .header__list
+                            each list in lists
+                                if list.icon
+                                    .header__list-item
+                                        svg.header__list-icon
+                                            use(href=list.icon)
+                                        if list.phone
+                                            a(href=`tel:${list.text}`)!= list.text
+                                        else
+                                            | #{list.text}
+                                else
+                                    .header__list-item= list.text
+                .header__container.header__container--navigation
+                    .container
+                        nav.header__navigation
+                            a.header__logo(href='/')
+                                svg
+                                    use(href='img/sprites/sprite.svg#biodent')
+                            ul.header__navigation-list
+                                each navigation in navigations
+                                    li.header__navigation-item(class=navigation.nested ? 'header__navigation-item--with-list':'')
+                                        a(href=navigation.link).header__navigation-name= navigation.name
+                                        if navigation.nested
+                                            .header__navigation-submenu
+                                                ul.header__navigation-submenu-wrapper
+                                                    each subname in navigation.nested
+                                                        li.header__navigation-subname
+                                                            a(href=subname.link).header__navigation-sublink= subname.name
+                            +button('button', 'Записаться на прием', 'transparent', 'callback')(class='header__button')
+

@@ -5,16 +5,40 @@
   border-bottom: 1px solid $blue;
   border-top: 1px solid $blue;
 
+  @include below(lg) {
+    padding: 38px 0;
+  }
+
+  @include below(md) {
+    padding: 36px 0;
+  }
+
   &__text {
     @include fontMontserrat16;
 
     text-align: center;
     margin: 0 auto;
     max-width: 845px;
+
+    @include below(lg) {
+      @include fontMontserrat15;
+
+      line-height: 18px;
+    }
+
+    @include below(md) {
+      @include fontMontserrat14;
+
+      line-height: 17px;
+    }
   }
 
   &__button {
+    height: 54px;
 
+    @include below(lg) {
+      height: 50px;
+    }
   }
 
   &--with-button {
@@ -22,6 +46,11 @@
     align-items: center;
     justify-content: center;
     gap: 100px;
+
+    @include below(md) {
+      flex-direction: column;
+      gap: 36px;
+    }
 
     #{$self}__text {
       text-align: left;

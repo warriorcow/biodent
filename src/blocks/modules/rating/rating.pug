@@ -3,16 +3,19 @@
         {
             logo: 'img/sprites/sprite.svg#2gis',
             score: '4,9',
+            link: '/',
             stars: 4
         },
         {
             logo: 'img/sprites/sprite.svg#yandex-map',
             score: '5,0',
+            link: '/',
             stars: 5
         },
         {
             logo: 'img/sprites/sprite.svg#prodoctorov',
             score: '4,9',
+            link: '/',
             stars: 4
         }
     ]
@@ -23,7 +26,7 @@ section.rating
         .rating__subtitle Ежедневно получаем положительные отзывы от клиентов
         .rating__wrapper
             each rating in ratings
-                .rating__item
+                a(href=rating.link).rating__item
                     .rating__logo
                         svg
                             use(href=rating.logo)

@@ -1,49 +1,119 @@
 .more-about-doctor {
   max-width: 1280px;
   width: 100%;
-  padding: 65px 70px 40px;
+  padding: 55px 55px 45px;
   box-sizing: border-box;
-  background-image: url('../img/more-about-doctor-bg.png');
-  background-position: bottom left;
-  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 417px auto;
+  gap: 0 55px;
+  align-items: flex-start;
+  position: relative;
 
-  &__body {
-    display: flex;
+  @include below(lg) {
+    grid-template-columns: 1fr;
+    padding: 24px 38px 35px;
+  }
+
+  @include below(md) {
+    grid-template-columns: 1fr;
+    padding: 24px 24px 30px;
+  }
+
+  &::before {
+    position: fixed;
+    content: '';
+    top: 0;
+    left: 0;
+    background-image: url('../img/more-about-doctor-bg.png');
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
   }
 
   &__image {
-    max-width: 386px;
+    min-width: 417px;
+    position: sticky;
+    top: 65px;
+
+    @include below(lg) {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      object-fit: contain;
+      object-position: top;
+    }
   }
 
-  &__info {
-    margin-left: 70px;
+  &__wrapper {
+    flex: 1;
+    overflow: hidden;
   }
 
   &__title {
     @include fontTTDrugs46;
 
     margin-bottom: 14px;
+
+    @include below(lg) {
+      @include fontTTDrugs20;
+
+      line-height: 24px;
+    }
   }
 
   &__subtitle {
     @include fontMontserrat16;
 
     margin-bottom: 26px;
+
+    @include below(lg) {
+      @include fontMontserrat13;
+
+      margin-bottom: 20px;
+    }
   }
 
   &__description {
     @include fontMontserrat14;
 
-    display: flex;
-    flex-direction: column;
-    height: 420px;
-    flex-wrap: wrap;
-    gap: 0 18px;
     line-height: 18.2px;
 
+    @include below(lg) {
+      @include fontMontserrat13;
+
+      line-height: 16.9px;
+    }
+
+    @include below(md) {
+      @include fontMontserrat12;
+
+      line-height: 15.6px;
+    }
+
     p {
-      width: 333px;
       margin-top: 0;
+      margin-bottom: 0;
+
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+
+        @include below(lg) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  &__certificates {
+    width: 100%;
+    margin-top: 32px;
+
+    @include below(lg) {
+      margin-top: 38px;
     }
   }
 }

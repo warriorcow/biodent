@@ -14,7 +14,6 @@
     ]
 
 section.banner
-    include ../../modules/header/header
     .banner__container
         .banner__logo
             svg
@@ -22,8 +21,8 @@ section.banner
         .banner__actions
             .banner__pagination
             .banner__buttons
-                +button('button', 'О клинике', 'light', 'callback')
-                +button('a', 'Запись на прием', 'transparent')
+                +button('button', 'О клинике', 'light', 'callback').banner__button
+                +button('a', 'Запись на прием', 'transparent').banner__button
 
         .banner__slider-background
             .banner__slider.swiper

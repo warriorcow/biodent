@@ -34,9 +34,11 @@ function openModal(idModal) {
 
 function closeModal(indexModal) {
     modals[indexModal].classList.remove('open');
-    document.querySelector('body').classList.remove('open-modal');
-    document.querySelector('header').classList.remove('open-modal');
-    document.querySelector('footer').classList.remove('open-modal');
+    setTimeout(() => {
+        document.querySelector('body').classList.remove('open-modal');
+        document.querySelector('header').classList.remove('open-modal');
+        document.querySelector('footer').classList.remove('open-modal');
+    }, 150)
     setTimeout(() => {
         modals[indexModal].style.display = 'none';
     }, TRANSITION_MS);

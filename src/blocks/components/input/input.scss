@@ -8,6 +8,8 @@
 
   &:focus {
     outline: none;
+    border-color: $lightblue;
+    caret-color: $lightblue;
   }
 
   &::placeholder {

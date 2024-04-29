@@ -2,6 +2,12 @@
   height: 100vh;
   text-align: center;
 
+  @include below(lg) {
+    @media screen and (min-height: 726px){
+      height: 726px;
+    }
+  }
+
   &__container {
     position: relative;
     height: calc(100% - 72px);
@@ -31,6 +37,14 @@
     height: 100%;
   }
 
+  &__button {
+    @include below(lg) {
+      @include fontMontserrat14;
+
+      max-width: 268px;
+    }
+  }
+
   &__slide-content {
     position: relative;
     margin-top: auto;
@@ -41,6 +55,14 @@
     line-height: 46px;
     color: $dirtyWhite;
     max-width: 820px;
+
+    @include below(lg) {
+      margin-bottom: 41.5vh;
+
+      @media screen and (min-height: 600px){
+        margin-bottom: 290px;
+      }
+    }
   }
 
   &__slide-image {
@@ -72,6 +94,18 @@
 
   &__title {
     @include fontTTDrugs46;
+
+    @include below(lg) {
+      @include fontTTDrugs38;
+
+      line-height: 38px;
+    }
+
+    @include below(md) {
+      @include fontTTDrugs28;
+
+      line-height: 31px;
+    }
   }
 
   &__subtitle {
@@ -79,6 +113,18 @@
 
     margin-top: 24px;
     position: relative;
+
+    @include below(lg) {
+      @include fontMontserrat20;
+
+      line-height: 20px;
+    }
+
+    @include below(md) {
+      @include fontMontserrat16;
+
+      line-height: 16px;
+    }
 
     &--link {
       &::after {
@@ -98,12 +144,28 @@
     max-width: 620px;
     width: 100%;
     margin: auto auto 80px;
+
+    @include below(lg) {
+      margin-bottom: 60px;
+      max-width: 566px;
+    }
   }
 
   &__buttons {
     display: flex;
     justify-content: space-between;
     margin-top: 21px;
+
+    @include below(lg) {
+      margin-top: 32px;
+    }
+
+    @include below(md) {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-top: 23px;
+    }
   }
 
   &__logo {
@@ -113,5 +175,15 @@
     height: 68px;
     fill: $dirtyWhite;
     margin-top: 180px;
+
+    @include below(lg) {
+      display: none;
+    }
+
+    @include below(md) {
+      display: block;
+      height: 42px;
+      margin-top: 66px;
+    }
   }
 }

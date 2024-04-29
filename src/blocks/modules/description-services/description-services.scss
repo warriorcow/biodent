@@ -1,3 +1,11 @@
 .description-services {
   margin-top: 99px;
+
+  @include below(lg) {
+    margin-top: 72px;
+  }
+
+  @include below(md) {
+    margin-top: 52px;
+  }
 }

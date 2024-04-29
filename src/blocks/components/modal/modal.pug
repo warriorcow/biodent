@@ -1,4 +1,4 @@
-mixin modal(id)
+mixin modal(id, theme)
     - const slots = {};
 
     mixin slot(name)
@@ -6,11 +6,9 @@ mixin modal(id)
 
     - block ? block() : undefined
 
-    .modal(id=id)&attributes(attributes)
+    .modal(id=id, class=theme?`modal--${theme}`:'')&attributes(attributes)
         .modal__content
             .modal__close
-                svg
-                    use(href='img/sprites/sprite.svg#cross')
             if slots['header']
                 .modal__header
                     - slots['header']();

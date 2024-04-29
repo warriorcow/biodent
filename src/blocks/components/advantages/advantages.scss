@@ -10,18 +10,44 @@
     padding: 35px 25px;
     flex: 1 0 200px;
     color: $white;
+
+    @include below(md) {
+      padding: 24px 17px;
+    }
   }
 
   &__title {
     @include fontTTDrugs24;
 
     line-height: 24px;
+
+    @include below(lg) {
+      @include fontTTDrugs20;
+
+      line-height: 20px;
+    }
+
+    @include below(md) {
+      @include fontTTDrugs18;
+
+      line-height: 18px;
+    }
   }
 
   &__description {
     @include fontMontserrat14;
 
     margin-top: 16px;
+
+    @include below(lg) {
+      @include fontMontserrat13;
+
+      margin-top: 14px;
+    }
+
+    @include below(md) {
+      @include fontMontserrat12;
+    }
   }
 
   &__icon {
@@ -29,6 +55,10 @@
     margin-top: auto;
     padding-top: 45px;
     width: 100%;
+
+    @include below(md) {
+      height: 28px;
+    }
 
     img {
       margin-left: auto;

@@ -41,49 +41,51 @@
     ]
 
 footer.footer
-    .footer__top.container
-        .footer__column
-            .footer__logo
-                svg
-                    use(href="img/sprites/sprite.svg#biodent")
-        .footer__column
-            each link in links
-                a.footer__link(href=link.url)= link.text
-        .footer__column
-            .footer__block
-                .footer__subtitle Если возникли вопросы
-                a.footer__text(href="tel:+73432372606") +7 (343) 237-26-06
-                a.footer__text(href="tel:+79827615961") +7 (982) 761-59-61
-            .footer__block
-                .footer__subtitle E-mail для связи
-                a.footer__text(href="mailto:biodent1993@gmail.com") biodent1993@gmail.com
-            .footer__block
-                .footer__subtitle Адрес
-                .footer__text Екатеринбург, ул. Крауля, 68
-        .footer__column
-            .footer__block
-                .footer__subtitle Режим работы
-                .footer__text пн | ср | пт - с 9:00 до 18:00
-                .footer__text вт | чт - с 9:00 до 20:00
-                .footer__text сб | вс - выходной
-            .footer__social-media
-                each social in socials
-                    a.footer__social-item(href=social.link, target="_blank")
-                        svg
-                            use(href=social.icon)
-    .footer__bottom
-        .footer__copyright.container
-            .footer__copyright-item © 2024, Биодент
-            a.footer__copyright-item(href="/policy") Политика конфиденциальности
-            a.footer__copyright-item(href="/data") Обработка персональных данных
-            .footer__copyright-item
-                | Разработано
-                a.footer__copyright-logo(href="https://inesi-agensy.ru/", target="_blank")
+    .container
+        .footer__top
+            .footer__column
+                .footer__logo
                     svg
-                        use(href="img/sprites/sprite.svg#inesi")
+                        use(href="img/sprites/sprite.svg#biodent")
+            .footer__column
+                each link in links
+                    a.footer__link(href=link.url)= link.text
+            .footer__column
+                .footer__block
+                    .footer__subtitle Если возникли вопросы
+                    a.footer__text(href="tel:+73432372606") +7 (343) 237-26-06
+                    a.footer__text(href="tel:+79827615961") +7 (982) 761-59-61
+                .footer__block
+                    .footer__subtitle E-mail для связи
+                    a.footer__text(href="mailto:biodent1993@gmail.com") biodent1993@gmail.com
+                .footer__block
+                    .footer__subtitle Адрес
+                    .footer__text Екатеринбург, ул.&nbsp;Крауля,&nbsp;68
+            .footer__column
+                .footer__block
+                    .footer__subtitle Режим работы
+                    .footer__text пн | ср | пт - с 9:00 до 18:00
+                    .footer__text вт | чт - с 9:00 до 20:00
+                    .footer__text сб | вс - выходной
+                .footer__social-media
+                    each social in socials
+                        a.footer__social-item(href=social.link, target="_blank")
+                            svg
+                                use(href=social.icon)
+    .footer__bottom
+        .container
+            .footer__copyright
+                .footer__copyright-item © 2024, Биодент
+                a.footer__copyright-item(href="/policy") Политика конфиденциальности
+                a.footer__copyright-item(href="/data") Обработка персональных данных
+                .footer__copyright-item
+                    | Разработано
+                    a.footer__copyright-logo(href="https://inesi-agensy.ru/", target="_blank")
+                        svg
+                            use(href="img/sprites/sprite.svg#inesi")
     +modal('callback')
         +slot('body')
             +callbackForm()
-    +modal('doctor')
+    +modal('doctor', 'blue')
         +slot('body')
             include ../more-about-doctor/more-about-doctor

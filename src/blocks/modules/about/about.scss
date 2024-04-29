@@ -1,12 +1,30 @@
 .about {
+  $self: &;
+
   display: flex;
   margin-top: 130px;
+
+  @include below(lg) {
+    margin-top: 58px;
+  }
+
+  @include below(md) {
+    margin-top: 120px;
+  }
 
   &__title {
     @include fontTTDrugs46;
 
     line-height: 69px;
     padding-bottom: 43px;
+    margin-left: 77px;
+
+    @include below(lg) {
+      @include fontTTDrugs38;
+
+      margin-left: 30px;
+      padding-bottom: 30px;
+    }
   }
 
   &__container {
@@ -14,46 +32,154 @@
     padding: 54px 0 70px;
     border-bottom: 2px solid $blue;
     border-top: 2px solid $blue;
+
+    @include below(lg) {
+      flex-direction: column;
+      padding: 38px 0;
+    }
+
+    @include below(md) {
+      position: relative;
+      padding-bottom: 135px;
+    }
   }
 
   &__button {
     margin-top: 30px;
     margin-bottom: 45px;
     height: 54px;
+
+    @include below(lg) {
+      max-width: 268px;
+    }
   }
 
   &__section-left {
     margin-right: 85px;
     flex: 1 0 540px;
+
+    @include below(lg) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-content: flex-start;
+      margin: 0;
+      align-items: center;
+      justify-content: space-around;
+      gap: 24px 0;
+      flex: auto;
+
+      @include below(lg) {
+        margin-bottom: 47px;
+      }
+
+      @include below(md) {
+        margin-bottom: 29px;
+        gap: 34px 0;
+      }
+
+      & > * {
+        &:first-child {
+          grid-column: 1 / span 2;
+        }
+
+        &:nth-child(2) {
+          order: 3;
+          margin: 0 0 0 auto;
+        }
+      }
+    }
+
+    @include below(md) {
+      & > * {
+
+        &:nth-child(2) {
+          position: absolute;
+          bottom: 35px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        &:last-child {
+          grid-column: 1 / span 2;
+        }
+      }
+    }
   }
 
   &__section-right {
     > :first-child {
       margin-bottom: 45px;
+
+      @include below(lg) {
+        margin-bottom: 22px;
+      }
+
+      @include below(md) {
+        margin-bottom: 14px;
+      }
     }
   }
 
   &__text {
     &--small {
       @include fontMontserrat14;
+
+      @include below(lg) {
+        @include fontMontserrat13;
+      }
     }
     &--medium {
       @include fontMontserrat16;
+
+      @include below(lg) {
+        @include fontMontserrat13;
+      }
+
+      @include below(md) {
+        @include fontMontserrat12;
+      }
     }
+
     &--large {
       @include fontMontserrat24;
+
+      @include below(lg) {
+        @include fontMontserrat20;
+      }
+
+      @include below(md) {
+        @include fontMontserrat18;
+      }
     }
   }
 
   &__year {
     display: flex;
     align-items: flex-end;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 33px 10px;
     margin-bottom: 25px;
+
+    @include below(lg) {
+      gap: 15px 25px;
+      margin-bottom: 0;
+    }
+
+    & > *:last-child {
+      width: 100%;
+    }
   }
 
   &__digit {
     @include fontTTDrugs60;
+
+    @include below(lg) {
+      @include fontTTDrugs48;
+    }
+
+    @include below(md) {
+      @include fontTTDrugs34;
+    }
   }
 
   &__statistics {
@@ -62,6 +188,14 @@
     gap: 20px 10px;
     margin-top: 50px;
     flex-wrap: wrap;
+
+    @include below(lg) {
+      margin-top: 27px;
+    }
+
+    @include below(md) {
+      margin-top: 29px;
+    }
   }
 
   &__statistics-item {
@@ -69,5 +203,23 @@
     flex-direction: column;
     gap: 25px 0;
     max-width: 136px;
+
+    @include below(lg) {
+      gap: 12px 0;
+    }
+
+    @include below(md) {
+      max-width: min-content;
+    }
+
+    #{$self}__text {
+      @include below(lg) {
+        @include fontMontserrat15;
+      }
+
+      @include below(md) {
+        @include fontMontserrat12;
+      }
+    }
   }
 }

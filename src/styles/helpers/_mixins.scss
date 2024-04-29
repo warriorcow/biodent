@@ -1,7 +1,40 @@
+$breakpoints: (
+  xs: 320px,
+  md: 768px,
+  lg: 1100px
+);
+
+@mixin below($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media only screen and (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @error "Unknown breakpoint #{$breakpoint}.";
+  }
+}
+
+@mixin above($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media only screen and (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @error "Unknown breakpoint #{$breakpoint}.";
+  }
+}
+
 @mixin fontTTDrugs60() {
   font-family: 'TT Drigs Trial', sans-serif;
   font-size: 60px;
   line-height: 60px;
+  font-weight: 700;
+}
+
+@mixin fontTTDrugs48() {
+  font-family: 'TT Drigs Trial', sans-serif;
+  font-size: 48px;
+  line-height: 57px;
   font-weight: 700;
 }
 
@@ -12,10 +45,45 @@
   font-weight: 700;
 }
 
+@mixin fontTTDrugs38() {
+  font-family: 'TT Drigs Trial', sans-serif;
+  font-size: 38px;
+  line-height: 57px;
+  font-weight: 700;
+}
+
+@mixin fontTTDrugs34() {
+  font-family: 'TT Drigs Trial', sans-serif;
+  font-size: 34px;
+  line-height: 40px;
+  font-weight: 700;
+}
+
+@mixin fontTTDrugs28() {
+  font-family: 'TT Drigs Trial', sans-serif;
+  font-size: 28px;
+  line-height: 42px;
+  font-weight: 700;
+}
+
 @mixin fontTTDrugs24() {
   font-family: 'TT Drigs Trial', sans-serif;
   font-size: 24px;
   line-height: 29px;
+  font-weight: 700;
+}
+
+@mixin fontTTDrugs20() {
+  font-family: 'TT Drigs Trial', sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+@mixin fontTTDrugs18() {
+  font-family: 'TT Drigs Trial', sans-serif;
+  font-size: 18px;
+  line-height: 27px;
   font-weight: 700;
 }
 
@@ -26,10 +94,38 @@
   font-weight: 700;
 }
 
+@mixin fontMontserrat48() {
+  font-family: Montserrat, sans-serif;
+  font-size: 48px;
+  line-height: 58px;
+  font-weight: 700;
+}
+
+@mixin fontMontserrat34() {
+  font-family: Montserrat, sans-serif;
+  font-size: 34px;
+  line-height: 42px;
+  font-weight: 700;
+}
+
 @mixin fontMontserrat24() {
   font-family: Montserrat, sans-serif;
   font-size: 24px;
   line-height: 29px;
+  font-weight: 500;
+}
+
+@mixin fontMontserrat20() {
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+@mixin fontMontserrat18() {
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  line-height: 21.6px;
   font-weight: 500;
 }
 
@@ -51,6 +147,13 @@
   font-family: Montserrat, sans-serif;
   font-size: 14px;
   line-height: 17px;
+  font-weight: 500;
+}
+
+@mixin fontMontserrat13() {
+  font-family: Montserrat, sans-serif;
+  font-size: 13px;
+  line-height: 15.6px;
   font-weight: 500;
 }
 

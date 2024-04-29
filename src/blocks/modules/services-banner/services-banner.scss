@@ -10,6 +10,20 @@
   display: flex;
   flex-direction: column;
 
+  @include below(lg) {
+    padding-top: 118px;
+    min-height: 558px;
+
+    @media screen and (min-height: 726px){
+      min-height: 558px;
+      height: auto;
+    }
+  }
+
+  @include below(md) {
+    height: 100dvh;
+  }
+
   &__header {
     margin-bottom: auto;
   }
@@ -21,6 +35,15 @@
     padding-bottom: 138px;
     margin-bottom: auto;
     margin-top: 30px;
+
+    @include below(lg) {
+      padding-bottom: 80px;
+    }
+
+    @include below(md) {
+      padding-bottom: 89px;
+      height: 100%;
+    }
   }
 
   &__title {
@@ -28,6 +51,19 @@
 
     text-align: center;
     max-width: 825px;
+
+    @include below(lg) {
+      @include fontTTDrugs38;
+
+      line-height: 38px;
+    }
+
+    @include below(md) {
+      @include fontTTDrugs28;
+
+      line-height: 30.8px;
+      margin-top: auto;
+    }
   }
 
   &__subtitle {
@@ -35,9 +71,35 @@
 
     margin-top: 18px;
     max-width: 1015px;
+
+    @include below(lg) {
+      @include fontMontserrat20;
+
+      max-width: 388px;
+      margin-top: 24px;
+      text-align: center;
+    }
+
+    @include below(md) {
+      @include fontMontserrat16;
+
+      margin-top: 35px;
+    }
   }
 
   &__button {
     margin-top: 77px;
+    height: 54px;
+
+    @include below(lg) {
+      margin-top: 50px;
+      height: 50px;
+    }
+
+    @include below(md) {
+      @include fontMontserrat14;
+
+      margin-top: auto;
+    }
   }
 }

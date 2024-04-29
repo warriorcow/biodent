@@ -6,12 +6,34 @@
   background-position: center;
   background-repeat: no-repeat;
 
+  @include below(lg) {
+    margin-top: 100px;
+    padding: 57px 0;
+  }
+
+  @include below(md) {
+    margin-top: 86px;
+    padding: 40px 0;
+  }
+
   &__price {
     margin-top: 88px;
+
+    @include below(lg) {
+      margin-top: 72px;
+    }
+
+    @include below(md) {
+      margin-top: 86px;
+    }
 
     &-title {
       margin-left: 77px;
       margin-bottom: 40px;
+
+      @include below(lg) {
+        margin-left: 30px;
+      }
     }
   }
 }

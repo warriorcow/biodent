@@ -12,6 +12,17 @@
   justify-content: center;
   opacity: 0;
 
+  &--blue {
+    #{$self}__close {
+      background-image: url('../img/svg/cross-blue.svg');
+    }
+  }
+
+  &__body {
+    max-height: 95vh;
+    overflow: auto;
+  }
+
   &__content {
     opacity: 0;
     transition-timing-function: ease-in-out;
@@ -20,16 +31,21 @@
     min-height: 200px;
     z-index: 100;
     background-color: $white;
+    margin: 0 15px;
   }
 
   &__close {
     position: absolute;
-    width: 24px;
-    height: 24px;
-    top: 10px;
-    right: 10px;
-    padding: 10px;
+    width: 14px;
+    height: 14px;
+    top: 24px;
+    right: 24px;
     cursor: pointer;
+    z-index: 1;
+    background-image: url('../img/svg/cross.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   &__backdrop {

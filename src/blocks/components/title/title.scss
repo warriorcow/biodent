@@ -4,6 +4,14 @@
   line-height: 69px;
   color: $deepBlack;
 
+  @include below(lg) {
+    @include fontTTDrugs38;
+  }
+
+  @include below(md) {
+    @include fontTTDrugs28;
+  }
+
   &--color {
     &-light {
       color: $dirtyWhite;
