@@ -1,0 +1,156 @@
+.our-work {
+  $self: &;
+
+  max-width: 1280px;
+  width: 100%;
+  padding: 28px 70px 50px;
+  background-image: url('../img/our-work-modal-bg.png');
+  background-size: cover;
+  box-sizing: border-box;
+
+  @include below(lg) {
+    padding: 24px 22px 65px;
+    background-image: url('../img/our-work-modal-bg-lg.png');
+  }
+
+  @include below(md) {
+    padding: 24px 12px 14px;
+    background-image: url('../img/our-work-modal-bg-md.png');
+  }
+
+  &__header {
+    margin-left: 77px;
+
+    @include below(lg) {
+      margin-left: 16px;
+    }
+
+    @include below(md) {
+      margin-left: 12px;
+    }
+  }
+
+  &__wrapper {
+    margin-top: 40px;
+    display: flex;
+    gap: 0 34px;
+
+    @include below(lg) {
+      flex-direction: column;
+      gap: 25px 0;
+      margin-top: 24px;
+    }
+
+    @include below(md) {
+      gap: 18px 0;
+      margin-top: 27px;
+    }
+  }
+
+  &__image {
+    height: 353px;
+
+    @include below(md) {
+      height: 174px;
+    }
+
+    img {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__name {
+    @include fontTTDrugs24;
+
+    padding: 25px;
+    background-image: url('../img/our-work-text-bg.png');
+    background-size: cover;
+    background-color: $white;
+
+    @include below(md) {
+      @include fontTTDrugs18;
+
+      padding: 8px 12px 13px;
+    }
+  }
+
+  &__title {
+    @include fontTTDrugs46;
+
+    @include below(lg) {
+      @include fontTTDrugs38;
+
+      line-height: 45.6px;
+    }
+
+    @include below(md) {
+      @include fontTTDrugs20;
+
+      line-height: 24px;
+    }
+  }
+
+  &__description {
+    @include fontMontserrat16;
+
+    margin-top: 20px;
+    max-width: 560px;
+
+    @include below(lg) {
+      @include fontMontserrat15;
+
+      margin-top: 14px;
+    }
+
+    @include below(md) {
+      @include fontMontserrat12;
+
+      margin-top: 9px;
+    }
+  }
+
+  &__result {
+    max-width: 644px;
+    width: 100%;
+
+    @include below(lg) {
+      max-width: 100%;
+    }
+
+    &--after {
+      max-width: 462px;
+      width: 100%;
+
+      @include below(lg) {
+        max-width: 100%;
+      }
+
+      #{$self}__name {
+        padding: 15px 25px;
+
+        @include below(lg) {
+          padding: 25px;
+        }
+
+        @include below(md) {
+          padding: 8px 12px 13px;
+        }
+      }
+
+      #{$self}__image {
+        height: 253px;
+
+        @include below(lg) {
+          height: 353px;
+        }
+
+        @include below(md) {
+          height: 174px;
+        }
+      }
+    }
+  }
+}

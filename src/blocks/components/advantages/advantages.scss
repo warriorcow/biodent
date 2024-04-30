@@ -3,6 +3,10 @@
   flex-wrap: wrap;
   gap: 20px;
 
+  @include below(lg) {
+    gap: 24px;
+  }
+
   &__item {
     display: flex;
     flex-direction: column;

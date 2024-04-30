@@ -2,7 +2,8 @@ const TRANSITION_MS = 300;
 const modals = document.querySelectorAll('.modal');
 const callbackModalElements = document.querySelectorAll('[data-modal="callback"]');
 const doctorModalElements = document.querySelectorAll('[data-modal="doctor"]');
-[...callbackModalElements, ...doctorModalElements].forEach(el => {
+const ourWorkModalElements = document.querySelectorAll('[data-modal="our-work"]');
+[...callbackModalElements, ...doctorModalElements, ...ourWorkModalElements].forEach(el => {
     el.addEventListener('click', ({ target }) => {
         openModal(target.dataset.modal);
     });

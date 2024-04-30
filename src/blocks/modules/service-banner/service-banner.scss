@@ -1,6 +1,6 @@
 .service-banner {
   padding-top: 218px;
-  background-image: url('../img/services-banner-bg.png');
+  background-image: url('../img/service-banner-bg.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -10,18 +10,46 @@
   flex-direction: column;
   padding-bottom: 80px;
 
+  @include below(lg) {
+    padding-top: 116px;
+  }
+
+  &__header {
+    padding: 0 75px;
+
+    @include below(lg) {
+      padding: 0 30px;
+    }
+  }
+
   &__body {
     display: flex;
     width: 100%;
-    padding: 0 0 70px;
+    padding: 0 75px 70px;
     margin: 20px auto 0;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
 
+    @include below(lg) {
+      margin-top: 56px;
+      padding: 0 30px 126px;
+    }
+
+    @include below(md) {
+      flex-direction: column-reverse;
+      padding-bottom: 115px;
+    }
+
     &-left {
       width: 100%;
       max-width: 600px;
+
+      @include below(md) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
     }
   }
 
@@ -29,14 +57,40 @@
     @include fontTTDrugs46;
 
     line-height: 46px;
+
+    @include below(lg) {
+      @include fontTTDrugs38;
+
+      line-height: 38px;
+    }
+
+    @include below(md) {
+      @include fontTTDrugs28;
+
+      line-height: 30.8px;
+      text-align: center;
+    }
   }
 
   &__subtitle {
     @include fontTTDrugs24;
 
     margin-top: 13px;
-
     line-height: 24px;
+
+    @include below(lg) {
+      @include fontTTDrugs20;
+
+      line-height: 24px;
+      margin-top: 24px;
+    }
+
+    @include below(md) {
+      @include fontTTDrugs18;
+
+      line-height: 18px;
+      text-align: center;
+    }
   }
 
   &__image {
@@ -44,6 +98,19 @@
     min-width: 383px;
     height: 383px;
     margin-left: 20px;
+
+    @include below(lg) {
+      margin-right: -60px;
+    }
+
+    @include below(md) {
+      width: 203px;
+      min-width: 203px;
+      height: 200px;
+      margin-right: 0;
+      margin-left: 0;
+      margin-bottom: 32px;
+    }
 
     img {
       width: 100%;
@@ -54,15 +121,37 @@
 
   &__button {
     margin-top: 120px;
+
+    @include below(lg) {
+      margin-top: 50px;
+    }
   }
 
   &__advantages {
     margin-top: 110px;
 
+    @include below(lg) {
+      margin-top: 72px;
+    }
+
+    @include below(md) {
+      margin-top: 86px;
+    }
+
     &-title {
       margin-left: 75px;
       max-width: 650px;
       line-height: 46px;
+
+      @include below(lg) {
+        margin-left: 30px;
+        line-height: 41.8px;
+      }
+
+      @include below(md) {
+        margin-left: 25px;
+        line-height: 30.8px;
+      }
     }
 
     &-wrapper {

@@ -1,7 +1,11 @@
 .our-services {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 15px;
+
+  @include below(lg) {
+    gap: 18px;
+  }
 
   &__item {
     display: flex;
@@ -9,6 +13,15 @@
     gap: 26px;
     padding: 20px;
     background-color: #fff;
+
+    @include below(lg) {
+      gap: 20px;
+    }
+
+    @include below(md) {
+      flex-wrap: wrap;
+      gap: 14px 20px;
+    }
   }
 
   &__checkbox {
@@ -22,6 +35,12 @@
     position: relative;
     box-sizing: border-box;
 
+    @include below(lg) {
+      width: 28px;
+      min-width: 28px;
+      height: 28px;
+    }
+
     &-checkmark {
       width: 11px;
       height: 18px;
@@ -29,6 +48,11 @@
       border-right: 2px solid #04041C;
       transform: translateY(-3px) rotate(45deg);
       box-sizing: border-box;
+
+      @include below(lg) {
+        width: 9px;
+        height: 16px;
+      }
     }
   }
 
@@ -36,6 +60,20 @@
     @include fontTTDrugs24;
 
     flex-grow: 1;
+
+    @include below(lg) {
+      @include fontTTDrugs20;
+
+      line-height: 22px;
+      max-width: 230px;
+      width: 100%;
+    }
+
+    @include below(md) {
+      @include fontTTDrugs18;
+
+      line-height: 19.8px;
+    }
   }
 
   &__description {
@@ -43,5 +81,19 @@
 
     max-width: 455px;
     width: 100%;
+
+    @include below(lg) {
+      @include fontMontserrat13;
+
+      line-height: 15.6px;
+      max-width: 100%;
+    }
+
+    @include below(md) {
+      @include fontMontserrat12;
+
+      width: 100%;
+      line-height: 14.4px;
+    }
   }
 }

@@ -31,24 +31,24 @@
 
     const itemsWorks = [
         {
-            title: 'Пырков<br> Сергей Трофимович',
-            description: 'Стоматолог общей практики',
-            image: 'img/doctor.png'
+            title: 'Название услуги',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+            image: 'img/our-work.png'
         },
         {
-            title: 'Пырков<br> Сергей Трофимович',
-            description: 'Стоматолог общей практики',
-            image: 'img/doctor.png'
+            title: 'Название услуги',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+            image: 'img/our-work.png'
         },
         {
-            title: 'Пырков<br> Сергей Трофимович',
-            description: 'Стоматолог общей практики',
-            image: 'img/doctor.png'
+            title: 'Название услуги',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+            image: 'img/our-work.png'
         },
         {
-            title: 'Пырков<br> Сергей Трофимович',
-            description: 'Стоматолог общей практики',
-            image: 'img/doctor.png'
+            title: 'Название услуги',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+            image: 'img/our-work.png'
         }
     ]
 
@@ -71,50 +71,13 @@
                     price: '2000 руб.'
                 }
             ]
-        },
-        {
-            title: 'Профилактика',
-            active: false,
-            prices: [
-                {
-                    name: `Первичная гигиеническая чистка (Удаление налета, зубного камня, полирование и фторирование
-                     эмали, подбор средств гигиены для домашнего ухода за полостью рта)`,
-                    price: '2000 руб.'
-                },
-                {
-                    name: 'Определение пародонтологического статуса',
-                    price: '2000 руб.'
-                },
-                {
-                    name: 'Определение пародонтологического статуса',
-                    price: '2000 руб.'
-                }
-            ]
-        },
-        {
-            title: 'Профилактика',
-            active: false,
-            prices: [
-                {
-                    name: 'Определение пародонтологического статуса',
-                    price: '2000 руб.'
-                },
-                {
-                    name: 'Определение пародонтологического статуса',
-                    price: '2000 руб.'
-                },
-                {
-                    name: 'Определение пародонтологического статуса',
-                    price: '2000 руб.'
-                }
-            ]
         }
     ]
 
 section.service-competitons
     .service-competitons__container.container
         +title('Наши работы')(class='service-competitons__title')
-        +slider(itemsWorks)
+        +slider(itemsWorks, 'vertical', null, 'our-work')
 
     .service-competitons__container.container
         +title('Наши услуги')(class='service-competitons__title')

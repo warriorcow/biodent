@@ -2,14 +2,41 @@
   padding-top: 85px;
   padding-bottom: 155px;
 
+  @include below(lg) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @include below(md) {
+    padding-top: 73px;
+    padding-bottom: 86px;
+  }
+
   &__container {
     &:not(:last-child) {
       margin-bottom: 135px;
+
+      @include below(lg) {
+        margin-bottom: 100px;
+      }
+
+      @include below(md) {
+        margin-bottom: 86px;
+      }
     }
   }
 
   &__title {
     margin-left: 77px;
     margin-bottom: 43px;
+
+    @include below(lg) {
+      margin-left: 30px;
+      margin-bottom: 30px;
+    }
+
+    @include below(md) {
+      margin-left: 25px;
+    }
   }
 }

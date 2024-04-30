@@ -5,7 +5,106 @@ block variables
     - const title = "Услуги | Биодент";
 
 block content
-    //include ../../blocks/modules/header/header
+    +header([
+        {
+            text: 'Екатеринбург, Крауля, 68'
+        },
+        {
+            text: 'пн | ср | пт - с 9:00 до 18:00'
+        },
+        {
+            text: 'вт | чт - с 9:00 до 20:00'
+        },
+        {
+            phone: true,
+            text: '+7 (343) 237-26-06',
+            icon: 'img/sprites/sprite.svg#phone'
+        },
+        {
+            phone: true,
+            text: '+7 (982) 761-59-61',
+            icon: 'img/sprites/sprite.svg#whatsapp'
+        }
+    ], [
+        {
+            name: 'Главная',
+            link: 'Главная'
+        },
+        {
+            name: 'Услуги',
+            nested: [
+                {
+                    name: 'Диагностика',
+                    link: 'Диагностика'
+                },
+                {
+                    name: 'Профилактика',
+                    link: 'Профилактика'
+                },
+                {
+                    name: 'Эстетика',
+                    link: 'Эстетика'
+                },
+                {
+                    name: 'Хирургия',
+                    link: 'Хирургия'
+                },
+                {
+                    name: 'Лечение',
+                    link: 'Лечение'
+                },
+                {
+                    name: 'Протезирование',
+                    link: 'Протезирование'
+                },
+                {
+                    name: 'Детям',
+                    link: 'Детям'
+                }
+            ]
+        },
+        {
+            name: 'Прайс',
+            nested: [
+                {
+                    name: 'Диагностика',
+                    link: 'Диагностика'
+                },
+                {
+                    name: 'Профилактика',
+                    link: 'Профилактика'
+                },
+                {
+                    name: 'Эстетика',
+                    link: 'Эстетика'
+                },
+                {
+                    name: 'Хирургия',
+                    link: 'Хирургия'
+                },
+                {
+                    name: 'Лечение',
+                    link: 'Лечение'
+                },
+                {
+                    name: 'Протезирование',
+                    link: 'Протезирование'
+                },
+                {
+                    name: 'Детям',
+                    link: 'Детям'
+                }
+            ]
+        },
+        {
+            name: 'О клинике',
+            link: 'О клинике'
+        },
+        {
+            name: 'Контакты',
+            link: 'Контакты'
+        }
+    ])
     include ../../blocks/modules/service-banner/service-banner
     include ../../blocks/modules/service-competitions/service-competitions
     include ../../blocks/modules/service-team/service-team
