@@ -5,10 +5,18 @@ import { Autoplay, Pagination } from 'swiper/modules';
 
 new Swiper('.banner__slider', {
     modules: [Autoplay, Pagination],
-    speed: 1000,
-    allowTouchMove: false,
+    speed: 500,
+    loop: true,
+    autoplay: {
+        delay: 5000
+    },
     pagination: {
         el: '.banner__pagination',
         clickable: true
+    },
+    breakpoints: {
+        768: {
+            allowTouchMove: false
+        }
     }
 });

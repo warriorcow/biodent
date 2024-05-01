@@ -1,8 +1,10 @@
-body {
+html, body {
   background-color: $dirtyWhite;
   overflow-x: hidden;
 
   &.loading {
+    opacity: 0;
+
     * {
       transition: none !important;
     }
@@ -10,7 +12,10 @@ body {
 
   &.open-modal {
     overflow: hidden;
-    padding-right: 17px;
+
+    @media screen and (min-device-width: 1100px) {
+      padding-right: 17px;
+    }
   }
 
   &.lock {
@@ -44,4 +49,8 @@ svg {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.callback-modal {
+  max-width: 698px;
 }

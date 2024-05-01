@@ -1,4 +1,6 @@
 .callback-form {
+  $self: &;
+
   display: flex;
   flex-direction: column;
   padding: 55px;
@@ -6,6 +8,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
+  position: relative;
 
   @include below(lg) {
     padding: 55px 77px;
@@ -39,6 +42,7 @@
 
     color: $dirtyWhite;
     margin-top: 14px;
+    max-width: 433px;
 
     @include below(lg) {
       @include fontMontserrat15;
@@ -63,6 +67,15 @@
     @include below(md) {
       margin-top: 28px;
     }
+
+    a {
+      cursor: pointer;
+      color: $lightblue;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   &__checkbox {
@@ -80,10 +93,55 @@
 
     @include below(lg) {
       @include fontMontserrat14;
+
+      height: 44px;
     }
 
     @include below(md) {
       margin-top: 33px;
+    }
+  }
+
+  &__thanks {
+    display: none;
+    position: absolute;
+    padding: 20px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    color: $dirtyWhite;
+
+    &-title {
+      line-height: 0.8;
+      text-align: center;
+
+      &:not(:first-child) {
+        margin-top: 13px;
+
+        @include below(lg) {
+          margin-top: 0;
+        }
+      }
+    }
+
+    &-text {
+      @include fontMontserrat16;
+
+      text-align: center;
+      margin-top: 23px;
+    }
+  }
+
+  &.thanks {
+    #{$self}__wrapper {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    #{$self}__thanks {
+      display: block;
     }
   }
 }

@@ -1,25 +1,9 @@
--
-    const certificates = [
-        'img/certificate.png',
-        'img/certificate.png',
-        'img/certificate.png',
-        'img/certificate.png',
-        'img/certificate.png',
-        'img/certificate.png',
-        'img/certificate.png',
-        'img/certificate.png',
-        'img/certificate.png',
-        'img/certificate.png',
-        'img/certificate.png',
-        'img/certificate.png',
-    ]
-
 .more-about-doctor
     .more-about-doctor__image
-        img(src="img/more-about-doctor-image.png")
+        img(src="https://i0.wp.com/stargazerdaycamp.com/wp-content/uploads/2019/01/no-image.jpg?fit=1000%2C1000&ssl=1")
     .more-about-doctor__wrapper
         .more-about-doctor__info
-            .more-about-doctor__title!= 'Пырков <br> Сергей Трофимович'
+            .more-about-doctor__title Врач
             .more-about-doctor__subtitle Стоматолог общей практики
             .more-about-doctor__description
                 p Кандидат медицинских наук, директор клиники, стоматолог-универсал, новатор. Выпускник Академии Прогрессивной Стоматологии им.Доусона (США, Флорида).
@@ -29,4 +13,3 @@
                 p Использует только самые надежные и проверенные технологии. Сформировал единственную в своем роде библиотеку книг по стоматологии в России. Сам Сергей Трофимович является инициатором и спонсором многих переводов на русский язык книг ведущих стоматологов мира.
                 p Это доктор, к которому ходят целыми семьями и приводят друзей. Попав к нему на прием, Вы получите комплексное лечение в соответствии с мировыми стандартами качества.
         .more-about-doctor__certificates
-            +slider-small(certificates)

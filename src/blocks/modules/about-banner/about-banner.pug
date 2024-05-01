@@ -1,0 +1,84 @@
+-
+    const servicesBreadcrumbs = [
+        {
+            name: 'Главная',
+            link: '/'
+        },
+        {
+            name: 'О клинике',
+            active: true
+        }
+    ]
+
+    const advantagesServices = [
+        {
+            title: 'Индивидуальные планы здоровья',
+            description: 'Мы разрабатываем индивидуальные планы профилактики и здоровья для каждого пациента, стремясь к максимально долгосрочным результатам лечения.',
+            icon: 'img/svg/plan.svg'
+        },
+        {
+            title: 'Стандарты мирового уровня',
+            description: 'Полная диагностика по стандартам американской ассоциации стоматологов, международные стерилизационные процедуры и оборудование с микроскопами обеспечивают точность и надежность в каждом лечебном случае.',
+            icon: 'img/svg/standart.svg'
+        },
+        {
+            title: 'Максимально долгосрочные результаты',
+            description: 'Наша цель - обеспечить максимально долгосрочные результаты лечения, улучшая стоматологическое здоровье и качество жизни наших пациентов.',
+            icon: 'img/svg/time.svg'
+        },
+        {
+            title: 'Технологии и инновации',
+            description: 'Мы постоянно следим за последними технологическими достижениями в стоматологии и внедряем их в работу клиники. Наши специалисты обучаются и совершенствуют свои навыки, чтобы использовать передовые методики и оборудование в лечебном процессе.',
+            icon: 'img/svg/tech.svg'
+        }
+    ]
+
+section.about-banner
+    .container
+        .about-banner__header
+            +breadcrumbs(servicesBreadcrumbs)
+        .about-banner__body
+            .about-banner__body-left
+                .about-banner__title Клиника «Биодент»
+                .about-banner__description
+                    | это место, где профессионализм встречается с заботой. С 1993 года мы предоставляем высококачественные стоматологические услуги в Екатеринбурге.
+                    br
+                    br
+                    | Под руководством кандидата медицинских наук, доктора Сергея Пыркова, наша клиника стала одной из лучших в России
+            .about-banner__body-right
+                +sliderGallery({
+                    items: [{
+                        src: 'img/slider-gallery.png',
+                        fancy: 'img/slider-gallery-big.png'
+                    },
+                    {
+                        src: 'img/slider-gallery.png',
+                        fancy: 'img/slider-gallery-big.png'
+                    },
+                    {
+                        src: 'img/slider-gallery.png',
+                        fancy: 'img/slider-gallery-big.png'
+                    },
+                    {
+                        src: 'img/slider-gallery.png',
+                        fancy: 'img/slider-gallery-big.png'
+                    }]
+                })
+
+        .about-banner__stats
+            .about-banner__stats-item
+                .about-banner__stats-title >30
+                .about-banner__stats-description Лет на рынке
+            .about-banner__stats-item
+                .about-banner__stats-title 250
+                .about-banner__stats-description Здоровых улыбок в год
+            .about-banner__stats-item
+                .about-banner__stats-title 50
+                .about-banner__stats-description Сертификатов и наград
+            .about-banner__stats-item
+                .about-banner__stats-title 10
+                .about-banner__stats-description Первоклассных специалистов
+        .about-banner__advantages
+            +title('Почему мы', null, 'light')(class='service-banner__advantages-title')
+            .about-banner__advantages-wrapper
+                +advantages(advantagesServices)

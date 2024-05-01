@@ -1,0 +1,11 @@
+mixin sliderDefault(options)
+    .slider-default.swiper
+        .swiper-wrapper
+            each item in options.items
+                a.slider-default__item.swiper-slide(href=item.fancy, data-fancybox='slider')
+                    img.slider-default__image(src=item.src)
+        .slider-default__navigation
+            .slider-default__arrow.slider-default__arrow-prev
+                .slider-default__arrow-icon
+            .slider-default__arrow.slider-default__arrow-next
+                .slider-default__arrow-icon

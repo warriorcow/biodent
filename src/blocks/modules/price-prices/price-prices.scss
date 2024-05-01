@@ -1,38 +1,118 @@
 .price-prices {
   padding-bottom: 120px;
 
+  @include below(lg) {
+    padding-bottom: 100px;
+  }
+
+  @include below(md) {
+    padding-bottom: 81px;
+  }
+
   &__container {
     &:not(:last-child) {
       margin-bottom: 100px;
+
+      @include below(lg) {
+        margin-bottom: 72px;
+      }
+
+      @include below(md) {
+        margin-bottom: 86px;
+      }
     }
   }
 
   &__title {
     margin-left: 77px;
     margin-bottom: 40px;
+
+    @include below(lg) {
+      margin-left: 30px;
+    }
+
+    @include below(md) {
+      margin-left: 15px;
+      line-height: 30.8px;
+    }
   }
 
   &-variants {
     display: flex;
     justify-content: space-between;
 
+    @include below(lg) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 68px 76px;
+    }
+
+    @include below(md) {
+      grid-template-columns: 1fr;
+      gap: 56px 0;
+    }
+
     &__item {
       width: 30%;
+
+      @include below(lg) {
+        width: 100%;
+      }
     }
 
     &__icon {
       margin-bottom: 52px;
       height: 42px;
+
+      img {
+        height: 100%;
+      }
+
+      @include below(lg) {
+        height: 35px;
+        margin-bottom: 45px;
+      }
+
+      @include below(md) {
+        height: 32px;
+        margin-bottom: 38px;
+      }
     }
 
     &__title {
       @include fontTTDrugs24;
+
+      @include below(lg) {
+        @include fontTTDrugs20;
+
+        line-height: 23px;
+      }
+
+      @include below(md) {
+        @include fontTTDrugs18;
+
+        line-height: 21px;
+      }
     }
 
     &__description {
       @include fontMontserrat14;
 
       margin-top: 20px;
+
+      @include below(lg) {
+        @include fontMontserrat13;
+
+        line-height: 17px;
+        margin-top: 16px;
+      }
+
+      @include below(md) {
+        @include fontMontserrat12;
+
+        line-height: 15.6px;
+        margin-top: 14px;
+      }
     }
   }
 }

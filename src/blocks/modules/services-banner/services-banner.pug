@@ -17,4 +17,9 @@ section.services-banner
     .services-banner__body.container
         .services-banner__title Профессиональная стоматология для вашего здоровья
         .services-banner__subtitle Медицинские услуги стоматологии: Качество, Забота, Уверенность
-        +button('button', 'Записаться на прием', 'light', 'callback')(class='services-banner__button')
+        +button({
+            text: 'Записаться на прием',
+            tag: 'button',
+            theme: 'light',
+            modal: 'callback'
+        }).services-banner__button

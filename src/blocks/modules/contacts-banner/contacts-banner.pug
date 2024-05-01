@@ -1,0 +1,70 @@
+section.contacts-banner
+    .container
+        .contacts-banner__header
+            +breadcrumbs([
+                {
+                    name: 'Главная',
+                    link: '/'
+                },
+                {
+                    name: 'Контакты',
+                    active: true
+                }
+            ], 'light')
+        .contacts-banner__body
+            .contacts-banner__title Контакты
+
+        .contacts-banner__map
+            .contacts-banner__map-info
+                .contacts-banner__map-logo
+                    svg
+                        use(href='img/sprites/sprite.svg#biodent')
+                .contacts-banner__map-zip 620131
+                .contacts-banner__map-text
+                    p Екатеринбург, ул. Крауля, 68
+                    p пн | ср | пт - с 9:00 до 18:00
+                    p вт | чт - с 9:00 до 20:00
+                    p сб | вс - выходной
+                .contacts-banner__map-phone
+                    a(href='tel:+7 (982) 761-59-61') +7 (982) 761-59-61
+                    a(href='tel:+7 (343) 237-26-06') +7 (343) 237-26-06
+                .contacts-banner__map-social
+                    a(href='/')
+                        svg
+                            use(href='img/sprites/sprite.svg#telegram')
+                    a(href='/')
+                        svg
+                            use(href='img/sprites/sprite.svg#email')
+                    a(href='/')
+                        svg
+                            use(href='img/sprites/sprite.svg#whatsapp')
+
+            .contacts-banner__map-map
+                script(
+                    src='https://api-maps.yandex.ru/2.1/?lang=ru_RU'
+                    type='text/javascript'
+                )
+                #map
+
+        .contacts-banner__requisites
+            +title('Реквизиты организции').contacts-banner__title
+            .contacts-banner__requisites-wrapper
+                .contacts-banner__requisites-column
+                    a(href="/") Общество с ограниченной ответственностью
+                    | Научно-Производственная Фирма «Биодент»
+                    br
+                    br
+                    | ИНН: 6658022981
+                    br
+                    | КПП: 665801001
+                    br
+                    | ОГРН 1026602325860
+                    br
+                    br
+                    | Общество зарегистрировано 08 апреля
+                    | 1998 года
+                    | Администрацией Верх-Исетского района
+                    | г. Екатеринбурга
+                .contacts-banner__requisites-column
+                    | Свидетельство №03148 серия IV-ВИ. 28 октября 2002 г. в соответствии с Федеральным Законом «О государственной регистрации юридических лиц» на основании представленных сведений в Единый государственный реестр юридических лиц ИМНС России по Верх-Исетскому району г. Екатеринбурга внесена запись о юридическом лице, зарегистрированном до 01 июля 2002г. ОГРН 1026602325860, Свидетельство серии 66 №003679729
+

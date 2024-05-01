@@ -1,6 +1,6 @@
-mixin button(tag, text, view, modal)
-    if tag === 'a'
-      a.button(href='/', class=`${view ? `button__${view}` : ''}`)&attributes(attributes) #{text}
+mixin button(options)
+    if options.tag === 'a'
+        a.button(href=options.link, class=`${options.view ? `button--${options.view}` : ''} ${options.theme ? `button--${options.theme}` : ''}`)&attributes(attributes) #{options.text}
 
     else
-      #{tag}.button(data-modal=modal)(class=`${view ? `button__${view}` : ''}`)&attributes(attributes) #{text}
+        #{options.tag}.button(data-modal=options.modal)(class=`${options.view ? `button--${options.view}` : ''} ${options.theme ? `button--${options.theme}` : ''}`)&attributes(attributes) #{options.text}

@@ -11,7 +11,13 @@ mixin slider(items, view, without_button, modal)
                                 .slider__item-title!= item.title
                                 .slider__item-description= item.description
                             if !without_button
-                                +button('button', 'Подробнее', 'light', modal?modal:'doctor').slider__button
+                                +button({
+                                    text: 'Подробнее',
+                                    theme: 'light',
+                                    tag: 'button',
+                                    view: 'small',
+                                    modal: modal ? modal : 'doctor'
+                                })(data-modal-info=item.modalInfo).slider__button
         .slider__navigation
             .slider__arrow.slider__arrow-prev
                 .slider__arrow-icon

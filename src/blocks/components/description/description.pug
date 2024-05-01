@@ -1,5 +1,10 @@
-mixin description(text, view, link)
-    .description(class=[link?'description--with-button':'', view?`description--view-${view}`:''])&attributes(attributes)
-        .description__text!= text
-        if link
-            +button('a', 'Прайс на улуги', '').description__button
+mixin description(options)
+    .description(class=[options.buttonText?'description--with-button':'', options.view?`description--view-${options.view}`:''])&attributes(attributes)
+        .description__text!= options.text
+        if options.buttonText
+            +button({
+              text: options.buttonText,
+              modal: options.buttonModal,
+              tag: options.tag,
+              link: options.link
+            }).description__button

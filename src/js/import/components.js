@@ -8,4 +8,7 @@ import '%components%/slider-small/slider-small';
 import '%components%/modal/modal';
 import '%components%/input/input';
 import '%components%/prices/prices';
+import '%components%/slider-gallery/slider-gallery';
+import '%components%/slider-default/slider-default';
+import '%components%/callback-form/callback-form';
 

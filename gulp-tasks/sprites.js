@@ -9,9 +9,6 @@ import browsersync from 'browser-sync';
 gulp.task('sprites', () => {
     return gulp.src(paths.sprites.src)
         .pipe(svg({
-            shape: {
-                dest: 'intermediate-svg'
-            },
             mode: {
                 stack: {
                     sprite: '../sprite.svg'

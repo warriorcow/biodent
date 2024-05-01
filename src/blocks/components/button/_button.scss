@@ -14,20 +14,64 @@
   line-height: 1;
   color: $dirtyWhite;
   border: none;
+  height: 54px;
 
-  &__transparent {
+  @include below(lg) {
+    @include fontMontserrat14;
+
+    line-height: 14px;
+    height: 50px;
+  }
+
+  &:hover {
+    @include above(lg) {
+      background-color: $deepBlack;
+      color: $dirtyWhite;
+      border: none;
+    }
+  }
+
+  &--small {
+    height: 44px;
+
+    @include below(lg) {
+      height: 44px;
+    }
+
+    @include below(lg) {
+      height: 31px;
+    }
+  }
+
+  &--light {
+    background-color: $white;
+    color: $deepBlack;
+
+    &:hover {
+      @include above(lg) {
+        background-color: $deepBlack;
+        color: $dirtyWhite;
+        border: none;
+      }
+    }
+  }
+
+  &--transparent {
     border: 2px solid $dirtyWhite;
     background-color: transparent;
+
+    &:hover {
+      @include above(lg) {
+        background-color: $deepBlack;
+        color: $dirtyWhite;
+        border: none;
+      }
+    }
   }
 
   &__transparent-dark {
     border: 2px solid $deepBlack;
     background-color: transparent;
-    color: $deepBlack;
-  }
-
-  &__light {
-    background-color: $white;
     color: $deepBlack;
   }
 }

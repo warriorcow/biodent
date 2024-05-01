@@ -1,0 +1,77 @@
+-
+    const itemsWorks = [
+        {
+            title: 'Название услуги',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            image: 'https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_3x4.jpg',
+            modalInfo: {
+                title: 'Услуга 1',
+                description: 'Услуга 1Услуга 1Услуга 1Услуга 1Услуга 1',
+                photo: {
+                    before: 'https://cdn.theatlantic.com/thumbor/d8lh_KAZuOgBYslMOP4T0iu9Fks=/0x62:2000x1187/1600x900/media/img/mt/2018/03/AP_325360162607/original.jpg',
+                    after: 'https://www.cats.org.uk/media/13136/220325case013.jpg?width=500&height=333.49609375',
+                }
+            }
+        },
+        {
+            title: 'Название услуги',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+            image: 'img/our-work.png',
+            modalInfo: {
+                title: 'Услуга 2',
+                description: 'Услуга 2Услуга 2Услуга 2Услуга 2'
+            }
+        },
+        {
+            title: 'Название услуги',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+            image: 'img/our-work.png'
+        },
+        {
+            title: 'Название услуги',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+            image: 'img/our-work.png'
+        }
+    ]
+section.about-us
+    .about-us__container.container
+        +title('Наши работы')(class='about-us__title')
+        +slider(itemsWorks, 'vertical', null, 'our-work')
+
+    .about-us__container.container
+        +videoReview({
+            title: 'Видео-обзор клиники',
+            buttonText: 'Смотреть',
+            buttonLink: '/',
+            video: 'https://www.youtube.com/embed/Y7ZiD7jvv2o?si=bBG5_Xda59dLVcGk'
+        })
+
+    .about-us__container.container
+        +title('Наши достижения')(class='about-us__title')
+        +sliderDefault({
+            items: [{
+                src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo6JT6tYTm1-OGzcVBgpJwMQs7zyW67sw_X5X3pFxf2w&s',
+                fancy: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo6JT6tYTm1-OGzcVBgpJwMQs7zyW67sw_X5X3pFxf2w&s'
+            },
+            {
+                src: 'img/certificate-big-2.png',
+                fancy: 'img/certificate-big-2-fancy.png'
+            },
+            {
+                src: 'img/certificate-big-3.png',
+                fancy: 'img/certificate-big-3-fancy.png'
+            },
+            {
+                src: 'img/certificate-big.png',
+                fancy: 'img/certificate-big-fancy.png'
+            },
+            {
+                src: 'img/certificate-big-2.png',
+                fancy: 'img/certificate-big-2-fancy.png'
+            },
+            {
+                src: 'img/certificate-big-3.png',
+                fancy: 'img/certificate-big-3-fancy.png'
+            }]
+        })
+

@@ -10,6 +10,8 @@
 
   @include below(md) {
     @include fontTTDrugs28;
+
+    line-height: 32px;
   }
 
   &--color {

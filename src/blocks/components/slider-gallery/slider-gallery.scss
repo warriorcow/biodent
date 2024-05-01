@@ -1,0 +1,57 @@
+.slider-gallery {
+
+  .swiper-wrapper {
+    height: 356px;
+
+    @include below(lg) {
+      height: 250px;
+    }
+
+    @include below(md) {
+      height: 233px;
+    }
+  }
+
+  &__item {
+    overflow: hidden;
+    outline: none;
+  }
+
+  &__item-image {
+    height: 100%;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__pagination {
+    line-height: 0;
+    margin-top: 20px;
+    text-align: center;
+
+    @include below(lg) {
+      margin-top: 32px;
+    }
+
+    @include below(lg) {
+      margin-top: 22px;
+    }
+
+    .swiper-pagination-bullet {
+      border-radius: 0;
+      width: 8px;
+      height: 8px;
+      border: 1px solid #D9D9D9;
+      box-sizing: border-box;
+      opacity: 1;
+      background: transparent;
+
+      &-active {
+        background: #D9D9D9;
+      }
+    }
+  }
+}

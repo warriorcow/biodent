@@ -2,23 +2,23 @@
     const links = [
         {
             text: 'Главная',
-            url: '#/'
+            url: '/'
         },
         {
             text: 'Услуги',
-            url: '#/'
+            url: 'services.html'
         },
         {
             text: 'Прайс',
-            url: '#/'
+            url: 'price.html'
         },
         {
             text: 'О клинике',
-            url: '#/'
+            url: 'about.html'
         },
         {
             text: 'Контакты',
-            url: '#/'
+            url: 'contacts.html'
         }
     ]
     const socials = [
@@ -76,8 +76,8 @@ footer.footer
         .container
             .footer__copyright
                 .footer__copyright-item © 2024, Биодент
-                a.footer__copyright-item(href="/policy") Политика конфиденциальности
-                a.footer__copyright-item(href="/data") Обработка персональных данных
+                a.footer__copyright-item(data-modal="policy") Политика конфиденциальности
+                a.footer__copyright-item(data-modal="personal") Обработка персональных данных
                 .footer__copyright-item
                     | Разработано
                     a.footer__copyright-logo(href="https://inesi-agensy.ru/", target="_blank")
@@ -85,10 +85,17 @@ footer.footer
                             use(href="img/sprites/sprite.svg#inesi")
     +modal('callback')
         +slot('body')
-            +callbackForm()
+            .callback-modal
+                +callbackForm()
     +modal('doctor', 'blue')
         +slot('body')
             include ../more-about-doctor/more-about-doctor
+    +modal('policy', 'blue')
+        +slot('body')
+            include ../policy-modal/policy-modal
+    +modal('personal', 'blue')
+        +slot('body')
+            include ../personal-modal/personal-modal
     +modal('our-work', 'blue')
         +slot('body')
             include ../our-work-modal/our-work-modal

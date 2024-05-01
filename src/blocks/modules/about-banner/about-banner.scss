@@ -1,0 +1,193 @@
+.about-banner {
+  padding-top: 218px;
+  background-image: url('../img/service-banner-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $dirtyWhite;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 80px;
+
+  @include below(lg) {
+    padding-top: 116px;
+  }
+
+  &__header {
+    padding: 0 75px;
+
+    @include below(lg) {
+      padding: 0 30px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    width: 100%;
+    padding: 0 0 86px 75px;
+    margin: 17px auto 0;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 0 50px;
+
+    @include below(lg) {
+      margin-top: 94px;
+      padding: 0 0 80px 30px;
+      gap: 0 30px;
+    }
+
+    @include below(md) {
+      margin-top: 52px;
+      flex-direction: column-reverse;
+      padding: 0 0 85px;
+      gap: 52px 0;
+    }
+
+    &-left {
+      width: 100%;
+      max-width: 600px;
+
+      @include below(md) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    &-right {
+      width: 536px;
+
+      @include below(lg) {
+        width: 300px;
+      }
+
+      @include below(md) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__title {
+    @include fontTTDrugs46;
+
+    line-height: 46px;
+
+    @include below(lg) {
+      @include fontTTDrugs38;
+
+      line-height: 38px;
+    }
+
+    @include below(md) {
+      @include fontTTDrugs28;
+
+      line-height: 30.8px;
+      text-align: center;
+    }
+  }
+
+  &__description {
+    @include fontMontserrat16;
+
+    margin-top: 30px;
+
+    @include below(lg) {
+      @include fontMontserrat14;
+
+      line-height: 17px;
+    }
+
+    @include below(md) {
+      text-align: center;
+    }
+  }
+
+  &__stats {
+    border-top: 2px solid $blue;
+    border-bottom: 2px solid $blue;
+    padding: 50px 75px;
+    display: grid;
+    grid-template-columns: repeat(4, 141px);
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+
+    @include below(lg) {
+      padding: 38px 0;
+    }
+
+    @include below(md) {
+      grid-template-columns: repeat(2, 113px);
+      padding: 36px 30px;
+      gap: 24px;
+      justify-content: center;
+    }
+
+    &-title {
+      @include fontTTDrugs60;
+
+      @include below(lg) {
+        @include fontTTDrugs48;
+      }
+
+      @include below(md) {
+        @include fontTTDrugs34;
+      }
+    }
+
+    &-description {
+      @include fontMontserrat16;
+
+      margin-top: 22px;
+      line-height: 19.2px;
+
+      @include below(lg) {
+        @include fontMontserrat15;
+
+        margin-top: 16px;
+        line-height: 18px;
+      }
+
+      @include below(md) {
+        @include fontMontserrat12;
+
+        margin-top: 12px;
+        line-height: 14.4px;
+      }
+    }
+  }
+
+  &__advantages {
+    margin-top: 110px;
+
+    @include below(lg) {
+      margin-top: 72px;
+    }
+
+    @include below(md) {
+      margin-top: 86px;
+    }
+
+    &-title {
+      margin-left: 75px;
+      max-width: 650px;
+      line-height: 46px;
+
+      @include below(lg) {
+        margin-left: 30px;
+        line-height: 41.8px;
+      }
+
+      @include below(md) {
+        margin-left: 25px;
+        line-height: 30.8px;
+      }
+    }
+
+    &-wrapper {
+      margin-top: 40px;
+    }
+  }
+}

@@ -37,6 +37,7 @@ headerNestedElements.forEach(item => {
         if (window.innerWidth >= 1100) {
             return;
         }
+        el.preventDefault()
         el.target.nextElementSibling.classList.toggle('open');
     });
 });
@@ -73,8 +74,6 @@ window.addEventListener('scroll', () => {
     if (scrollDirection === 'down' && scrollTop >= headerElementHeight) {
         setFixedHeader();
     }
-
-    console.log('Scroll direction:', scrollDirection);
 });
 
 function setFixedHeader() {

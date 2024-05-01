@@ -27,6 +27,19 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'img/', // каталог, куда будут скопированы файлы
+                            publicPath: 'img/', // путь к файлам относительно итогового bundle.js
+                        },
+                    },
+                ],
+            },
+            {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
@@ -52,7 +65,8 @@ module.exports = {
     resolve: {
         alias: {
             '%modules%': path.resolve(__dirname, 'src/blocks/modules'),
-            '%components%': path.resolve(__dirname, 'src/blocks/components')
+            '%components%': path.resolve(__dirname, 'src/blocks/components'),
+            '%images%': path.resolve(__dirname, 'src/img')
         }
     }
 };

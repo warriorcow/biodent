@@ -1,11 +1,25 @@
 mixin callbackForm()
     .callback-form
-        .callback-form__title Запишитесь на Прием!
-        .callback-form__subtitle Оставьте свои контактные данные, и мы свяжемся с вами для записи на консультацию
+        .callback-form__wrapper
+            .callback-form__title Запишитесь на Прием!
+            .callback-form__subtitle Оставьте свои контактные данные, и мы свяжемся с вами для записи на консультацию
 
-        form.callback-form__form
-            +input('Имя')(class='callback-form__input')
-            +input('Телефон', 'tel')(class='callback-form__input')
-            +checkbox('Соглашаюсь с Политикой Конфиденциальности')(class='callback-form__checkbox')
-                 | Соглашаюсь с Политикой Конфиденциальности
-            +button('button', 'Записаться на консультацию', 'light')(class='callback-form__submit')
+            form.callback-form__form
+                +input('Имя')(class='callback-form__input required', data-input="name")
+                +input('Телефон', 'tel')(class='callback-form__input required', data-input="phone")
+                +checkbox().callback-form__checkbox
+                     | Соглашаюсь с&nbsp;
+                     a(data-modal='policy') Политикой Конфиденциальности
+                +button({
+                    text: 'Записаться на консультацию',
+                    tag: 'button',
+                    theme: 'light',
+                    view: 'small'
+                }).callback-form__submit
+        .callback-form__thanks
+            +title('Спасибо', null, 'light').callback-form__thanks-title
+            +title('Ваша заявка принята', null, 'light').callback-form__thanks-title
+
+            .callback-form__thanks-text Наш менеджер свяжется с вами в ближайшее время
+
+

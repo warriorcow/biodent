@@ -57,9 +57,9 @@
       flex: 1;
       padding: 25px 25px 40px;
       background-image: url('../img/slider-bg.png');
-      background-size: cover;
+      background-size: 101% 100%;
       background-repeat: no-repeat;
-      background-position: 0;
+      background-position: -2px;
       background-color: $white;
     }
 
@@ -192,7 +192,6 @@
 
   &--vertical {
     & #{$self}__item-wrapper {
-      height: auto;
       flex-direction: column;
     }
 
@@ -213,7 +212,7 @@
       @include fontMontserrat14;
 
       line-height: 15px;
-      max-width: 280px;
+      max-width: 410px;
       overflow: hidden;
       text-overflow: ellipsis;
       display: -moz-box;
@@ -223,7 +222,7 @@
       -webkit-box-orient: vertical;
       line-clamp: 4;
       box-orient: vertical;
-      margin-top: 30px;
+      margin-top: 20px;
 
       @include below(lg) {
         @include fontMontserrat13;
@@ -234,7 +233,7 @@
       }
 
       @include below(md) {
-        @include fontMontserrat13;
+        @include fontMontserrat12;
 
         margin-top: 9px;
         line-height: 13.2px;
@@ -245,6 +244,7 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-end;
+      padding-bottom: 25px;
 
       @include below(md) {
         flex-direction: column;

@@ -1,0 +1,37 @@
+.about-us {
+  padding-top: 98px;
+  padding-bottom: 78px;
+
+  @include below(lg) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @include below(md) {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+
+  &__container {
+    &:not(:first-child) {
+      margin-top: 105px;
+
+      @include below(md) {
+        margin-top: 86px;
+      }
+    }
+  }
+
+  &__title {
+    margin-left: 77px;
+    margin-bottom: 40px;
+
+    @include below(lg) {
+      margin-left: 30px;
+    }
+
+    @include below(md) {
+      margin-left: 26px;
+    }
+  }
+}

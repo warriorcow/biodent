@@ -128,6 +128,12 @@
     align-items: center;
     white-space: nowrap;
 
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
     @include below(lg) {
       @include fontMontserrat14;
     }
@@ -174,6 +180,7 @@
   &__navigation-name {
     display: flex;
     align-items: center;
+    z-index: 1;
   }
 
   &__navigation-list {
@@ -314,6 +321,10 @@
     @include below(lg) {
       padding: 10px 20px;
       min-width: 182px;
+    }
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 
@@ -458,7 +469,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 100dvh;
+        height: 100svh;
         overflow: auto;
         background-color: $deepBlack;
         padding: 60px 47px;

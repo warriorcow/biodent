@@ -44,13 +44,20 @@ section.service-banner
             .service-banner__body-left
                 .service-banner__title Забота о ваших зубах
                 .service-banner__subtitle Профессиональная гигиена и профилактика
-                +button('button', 'Записаться на прием', 'light', 'callback')(class='service-banner__button')
+                +button({
+                    text: 'Записаться на прием',
+                    tag: 'button',
+                    theme: 'light',
+                    modal: 'callback'
+                }).service-banner__button
             .service-banner__body-right
                 .service-banner__image
                     img(src='img/service-banner.png')
-        +description(`Профессиональная гигиена полости рта - важный этап в поддержании здоровья зубов и десен.
-        Наши специалисты предлагают качественную чистку зубов, используя передовые методики и материалы, чтобы
-        предотвратить развитие кариеса и болезней десен, обеспечивая вам долгосрочное сохранение здоровья зубов.`)
+        +description({
+            text: `Профессиональная гигиена полости рта - важный этап в поддержании здоровья зубов и десен.
+            Наши специалисты предлагают качественную чистку зубов, используя передовые методики и материалы, чтобы
+            предотвратить развитие кариеса и болезней десен, обеспечивая вам долгосрочное сохранение здоровья зубов.`
+        })
         .service-banner__advantages
             +title('4 причины начать лечение в нашей клинике', null, 'light')(class='service-banner__advantages-title')
             .service-banner__advantages-wrapper

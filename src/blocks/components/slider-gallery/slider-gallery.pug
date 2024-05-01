@@ -1,0 +1,8 @@
+mixin sliderGallery(options)
+    div.slider-gallery.swiper
+        .swiper-wrapper
+            each item in options.items
+                a.slider-gallery__item.swiper-slide(href=item.fancy, data-fancybox='gallery')
+                    .slider-gallery__item-image
+                        img(src=item.src)
+        .slider-gallery__pagination

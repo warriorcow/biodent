@@ -38,6 +38,7 @@
         "css-loader": "^6.10.0",
         "del": "^6.0.0",
         "eslint": "^8.11.0",
+        "file-loader": "^6.2.0",
         "gulp": "^4.0.2",
         "gulp-autoprefixer": "^8.0.0",
         "gulp-clean-css": "^4.3.0",

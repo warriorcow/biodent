@@ -1,0 +1,18 @@
+mixin videoReview(options)
+    .video-review(class=options.view?`video-review--${options.view}`:'')
+        .video-review__wrapper
+            .video-review__title!= options.title
+            +button({
+                text: options.buttonText,
+                tag: 'a',
+                link: '/'
+            }).video-review__button
+        .video-review__video
+            iframe(
+                src=options.video
+                title='YouTube video player'
+                frameborder='0'
+                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                referrerpolicy='strict-origin-when-cross-origin'
+                allowfullscreen=''
+            )

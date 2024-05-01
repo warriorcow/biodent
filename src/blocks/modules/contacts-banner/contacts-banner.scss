@@ -1,0 +1,262 @@
+.contacts-banner {
+  padding-top: 200px;
+  padding-bottom: 114px;
+
+  @include below(lg) {
+    padding-top: 118px;
+    padding-bottom: 100px;
+  }
+
+  @include below(md) {
+    padding-top: 118px;
+    padding-bottom: 86px;
+  }
+
+  &__header {
+    margin-left: 77px;
+
+    @include below(lg) {
+      margin-left: 30px;
+    }
+
+    @include below(md) {
+      margin-left: 15px;
+    }
+  }
+
+  &__body {
+    margin-top: 80px;
+    margin-left: 77px;
+
+    @include below(lg) {
+      margin-top: 100px;
+      margin-left: 30px;
+    }
+
+    @include below(md) {
+      margin-top: 52px;
+      margin-left: 15px;
+    }
+  }
+
+  &__title {
+    @include fontTTDrugs46;
+
+    @include below(lg) {
+      @include fontTTDrugs38;
+
+      line-height: 41.8px;
+    }
+
+    @include below(md) {
+      @include fontTTDrugs28;
+
+      line-height: 30.8px;
+    }
+  }
+
+  &__map {
+    display: flex;
+    margin-top: 45px;
+
+    @include below(md) {
+      margin-top: 35px;
+      flex-direction: column;
+    }
+
+    &-info {
+      @include fontMontserrat16;
+
+      color: $dirtyWhite;
+      width: 440px;
+      background-color: $deepBlack;
+      background-image: url('../img/map-bg.png');
+      background-size: cover;
+      padding: 50px 65px 45px;
+      box-sizing: border-box;
+
+      @include below(lg) {
+        @include fontMontserrat15;
+
+        padding: 45px 30px;
+        width: 360px;
+      }
+
+      @include below(md) {
+        @include fontMontserrat14;
+
+        width: 100%;
+        padding: 50px 25px 40px;
+      }
+    }
+
+    &-zip {
+      @include fontMontserrat14;
+
+      color: $blue;
+      margin-bottom: 16px;
+
+      @include below(lg) {
+        @include fontMontserrat13;
+      }
+
+      @include below(md) {
+        @include fontMontserrat12;
+      }
+    }
+
+    &-text {
+      p {
+        margin: 0;
+
+        &:not(:last-child) {
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    &-phone {
+      @include fontTTDrugs24;
+
+      display: flex;
+      flex-direction: column;
+      margin-top: 65px;
+      border-top: 2px solid $dirtyWhite;
+      border-bottom: 2px solid $dirtyWhite;
+
+      @include below(lg) {
+        @include fontTTDrugs20;
+      }
+
+      @include below(md) {
+        @include fontTTDrugs18;
+      }
+
+      a {
+        padding: 12px 10px;
+
+        @include below(lg) {
+          padding: 14px 17px;
+        }
+
+        @include below(md) {
+          padding: 14px 10px;
+        }
+
+        &:not(:last-child) {
+          border-bottom: 2px solid $dirtyWhite;
+        }
+      }
+    }
+
+    &-map {
+      flex: 1;
+
+      @include below(md) {
+        height: 356px;
+        flex: auto;
+      }
+
+      #map {
+        width: 100%;
+        height: 100%;
+
+        [class*=-ground-pane] {
+          -webkit-filter: grayscale(100%);
+        }
+      }
+    }
+
+    &-logo {
+      fill: $dirtyWhite;
+      width: 176px;
+      height: 30px;
+      margin-bottom: 48px;
+    }
+
+    &-social {
+      display: flex;
+      gap: 0 20px;
+      margin-top: 12px;
+
+      @include below(lg) {
+        margin-top: 16px;
+      }
+
+      @include below(md) {
+        margin-top: 14px;
+      }
+
+      a {
+        width: 31px;
+        height: 24px;
+        fill: $dirtyWhite;
+      }
+    }
+  }
+
+  &__requisites {
+    margin: 87px 0 0 77px;
+
+    @include below(lg) {
+      margin-left: 0;
+      margin-top: 100px;
+    }
+
+    @include below(lg) {
+      margin-top: 86px;
+    }
+
+    a {
+      color: $blue;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &-wrapper {
+      display: flex;
+      gap: 0 133px;
+      margin-top: 14px;
+
+      @include below(lg) {
+        gap: 0 30px;
+      }
+
+      @include below(md) {
+        flex-direction: column;
+        gap: 30px 0;
+      }
+    }
+
+    &-column {
+      @include fontMontserrat14;
+
+      line-height: 16.8px;
+      flex: 1;
+
+      @include below(lg) {
+        @include fontMontserrat13;
+
+        line-height: 16.8px;
+      }
+
+      @include below(md) {
+        @include fontMontserrat12;
+
+        line-height: 14.4px;
+      }
+    }
+  }
+
+  &__title {
+    @include below(lg) {
+      margin-left: 30px;
+    }
+
+    @include below(md) {
+      margin-left: 15px;
+    }
+  }
+}

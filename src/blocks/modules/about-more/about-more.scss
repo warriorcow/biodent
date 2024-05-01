@@ -1,0 +1,38 @@
+.about-more {
+  background-image: url('../img/about-more-bg.png');
+  background-size: cover;
+  padding: 127px 0 174px;
+
+  @include below(lg) {
+    padding: 74px 0 105px;
+  }
+
+  @include below(md) {
+    padding: 64px 0 42px;
+  }
+
+  &__container {
+    &:not(:first-child) {
+      margin-top: 105px;
+
+      @include below(md) {
+        margin-top: 86px;
+      }
+    }
+  }
+
+  &__title {
+    margin-left: 73px;
+    margin-bottom: 40px;
+
+    @include below(lg) {
+      margin-left: 30px;
+      line-height: 41.8px;
+    }
+
+    @include below(md) {
+      margin-left: 25px;
+      line-height: 30.8px;
+    }
+  }
+}

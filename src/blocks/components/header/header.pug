@@ -9,7 +9,12 @@ mixin header(lists, navigations, without_logo)
             .header__close
             .header__mobile-menu-wrapper
                 .container
-                    +button('button', 'Записаться на прием', 'transparent', 'callback')(class='header__mobile-button')
+                    +button({
+                      text: 'Записаться на прием',
+                      tag: 'button',
+                      theme: 'transparent',
+                      modal: 'callback'
+                    }).header__mobile-button
                 .header__container
                     .container
                         .header__list
@@ -40,5 +45,10 @@ mixin header(lists, navigations, without_logo)
                                                     each subname in navigation.nested
                                                         li.header__navigation-subname
                                                             a(href=subname.link).header__navigation-sublink= subname.name
-                            +button('button', 'Записаться на прием', 'transparent', 'callback')(class='header__button')
+                            +button({
+                              text: 'Записаться на прием',
+                              theme: 'transparent',
+                              modal: 'callback',
+                              tag: 'button'
+                            }).header__button
 

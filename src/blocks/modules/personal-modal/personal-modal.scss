@@ -1,0 +1,27 @@
+.personal-modal {
+  padding: 60px 70px;
+  background-color: $dirtyWhite;
+  max-width: 960px;
+  width: 100%;
+  box-sizing: border-box;
+
+  @include below(lg) {
+    padding: 30px 40px;
+  }
+
+  @include below(md) {
+    padding: 20px 30px;
+  }
+
+  &__title {
+    @include below(lg) {
+      line-height: 48px;
+    }
+  }
+
+  &__wrapper {
+    @include fontMontserrat14;
+
+    margin-top: 36px;
+  }
+}

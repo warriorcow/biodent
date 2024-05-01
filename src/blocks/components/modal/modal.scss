@@ -12,6 +12,14 @@
   justify-content: center;
   opacity: 0;
 
+  a {
+    color: $blue;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   &--blue {
     #{$self}__close {
       background-image: url('../img/svg/cross-blue.svg');
@@ -20,7 +28,29 @@
 
   &__body {
     max-height: 95vh;
-    overflow: auto;
+    overflow: hidden;
+    overflow-y: auto;
+
+
+    & {
+      scrollbar-width: thin;
+      scrollbar-color: #000000 $dirtyWhite;
+    }
+
+    /* Chrome, Edge, and Safari */
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $dirtyWhite;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #000000;
+      border-radius: 10px;
+      border: 3px solid $dirtyWhite;
+    }
   }
 
   &__content {
@@ -38,14 +68,15 @@
     position: absolute;
     width: 14px;
     height: 14px;
-    top: 24px;
-    right: 24px;
+    top: 0;
+    right: 0;
     cursor: pointer;
     z-index: 1;
     background-image: url('../img/svg/cross.svg');
-    background-size: cover;
+    background-size: 14px;
     background-position: center;
     background-repeat: no-repeat;
+    padding: 24px;
   }
 
   &__backdrop {

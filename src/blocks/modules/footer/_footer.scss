@@ -204,8 +204,12 @@
     display: flex;
     align-items: baseline;
 
-    &:hover {
-      text-decoration: underline;
+    + a {
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     @include below(lg) {

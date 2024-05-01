@@ -5,7 +5,78 @@ block variables
     - const title = "Цены | Биодент";
 
 block content
-    //include ../../blocks/modules/header/header
+    +header([
+        {
+            text: 'Екатеринбург, Крауля, 68'
+        },
+        {
+            text: 'пн | ср | пт - с 9:00 до 18:00'
+        },
+        {
+            text: 'вт | чт - с 9:00 до 20:00'
+        },
+        {
+            phone: true,
+            text: '+7 (343) 237-26-06',
+            icon: 'img/sprites/sprite.svg#phone'
+        },
+        {
+            phone: true,
+            text: '+7 (982) 761-59-61',
+            icon: 'img/sprites/sprite.svg#whatsapp'
+        }
+    ], [
+        {
+            name: 'Главная',
+            link: '/'
+        },
+        {
+            name: 'Услуги',
+            link: 'services.html',
+            nested: [
+                {
+                    name: 'Диагностика',
+                    link: 'service.html'
+                },
+                {
+                    name: 'Профилактика',
+                    link: 'service.html'
+                },
+                {
+                    name: 'Эстетика',
+                    link: 'service.html'
+                },
+                {
+                    name: 'Хирургия',
+                    link: 'service.html'
+                },
+                {
+                    name: 'Лечение',
+                    link: 'service.html'
+                },
+                {
+                    name: 'Протезирование',
+                    link: 'service.html'
+                },
+                {
+                    name: 'Детям',
+                    link: 'service.html'
+                }
+            ]
+        },
+        {
+            name: 'Прайс',
+            link: 'price.html'
+        },
+        {
+            name: 'О клинике',
+            link: 'about.html'
+        },
+        {
+            name: 'Контакты',
+            link: 'contacts.html'
+        }
+    ])
     include ../../blocks/modules/price-banner/price-banner
     include ../../blocks/modules/price-prices/price-prices
     include ../../blocks/modules/callback/callback

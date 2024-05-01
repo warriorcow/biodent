@@ -5,7 +5,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: $dirtyWhite;
-  height: 100vh;
+  height: 100svh;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@
   }
 
   @include below(md) {
-    height: 100dvh;
+    height: 100svh;
   }
 
   &__header {
