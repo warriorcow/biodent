@@ -42,8 +42,7 @@ function checkRequired(inputArr, phoneArr) {
 function submit(formElement, data) {
     const formData = new FormData();
     Object.keys(data).forEach(key => {
-        console.log(key, data[key])
-        formData.append(key, data[key])
+        formData.append(key, data[key]);
     });
 
     BX.ajax({

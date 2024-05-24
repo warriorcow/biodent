@@ -19,5 +19,27 @@ new Swiper('.slider', {
         1100: {
             slidesPerView: 1.74,
         }
+    },
+    on: {
+        init(swiper) {
+            if (swiper.slides.length <= 2 && swiper.currentBreakpoint === '1100') {
+                swiper.allowTouchMove = false;
+                swiper.navigation.nextEl.parentElement.style.display = 'none';
+            }
+        },
+        breakpoint(swiper) {
+            console.log(swiper.currentBreakpoint)
+            if (swiper.slides.length === 2 && swiper.currentBreakpoint === 'max') {
+                setTimeout(() => {
+                    swiper.navigation.nextEl.parentElement.style.display = 'flex';
+                }, 0);
+            }
+            if (swiper.slides.length === 2 && swiper.currentBreakpoint === '1100') {
+                setTimeout(() => {
+                    swiper.navigation.nextEl.parentElement.style.display = 'none';
+                    swiper.allowTouchMove = false;
+                }, 0);
+            }
+        }
     }
 });
