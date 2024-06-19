@@ -4,8 +4,9 @@ mixin slider(items, view, without_button, modal)
             each item in items
                 .slider__item.swiper-slide
                     .slider__item-wrapper
-                        .slider__item-image
-                            img(src=item.image)
+                        picture.slider__item-image
+                            source(srcset=item.imageForMobile, media="(max-width: 768px)")
+                            img(src=item.image, alt=item.title)
                         .slider__item-content
                             .slider__item-info
                                 .slider__item-title!= item.title

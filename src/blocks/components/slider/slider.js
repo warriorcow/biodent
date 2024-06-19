@@ -28,7 +28,6 @@ new Swiper('.slider', {
             }
         },
         breakpoint(swiper) {
-            console.log(swiper.currentBreakpoint)
             if (swiper.slides.length === 2 && swiper.currentBreakpoint === 'max') {
                 setTimeout(() => {
                     swiper.navigation.nextEl.parentElement.style.display = 'flex';

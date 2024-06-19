@@ -47,6 +47,11 @@
         width: calc(100% + 1px);
         height: calc(100% + 1px);
         object-fit: cover;
+        object-position: top;
+
+        @include below(md) {
+          object-position: center;
+        }
       }
     }
 

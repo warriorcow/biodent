@@ -31,7 +31,6 @@ new Swiper('.slider-default', {
             }
         },
         breakpoint(swiper) {
-            console.log(swiper.currentBreakpoint)
             if (swiper.slides.length > 2 && (swiper.currentBreakpoint === '768' || swiper.currentBreakpoint === 'max')) {
                 setTimeout(() => {
                     console.log('mobile')

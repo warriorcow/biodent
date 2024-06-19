@@ -110,10 +110,13 @@
 
   &__certificates {
     width: 100%;
-    margin-top: 32px;
 
-    @include below(lg) {
-      margin-top: 38px;
+    .slider-small {
+      margin-top: 32px;
+
+      @include below(lg) {
+        margin-top: 38px;
+      }
     }
   }
 }
