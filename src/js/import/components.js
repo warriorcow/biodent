@@ -11,4 +11,5 @@ import '%components%/prices/prices';
 import '%components%/slider-gallery/slider-gallery';
 import '%components%/slider-default/slider-default';
 import '%components%/callback-form/callback-form';
+import '%components%/cookie-popup/cookie-popup';
 

@@ -1,0 +1,11 @@
+mixin cookiePopup()
+    .cookie-popup#cookiePopup
+        .cookie-popup__text
+            | Мы применяем файлы cookie, чтобы сделать использование сайта удобным для вас. Нажимая «ОК», вы соглашаетесь с&nbsp;
+            span.cookie-popup__policy(data-modal="policy") Политикой обработки персональных данных
+            | .
+        +button({
+            text: 'ОК',
+            theme: 'light',
+            tag: 'button'
+        }).cookie-popup__button#cookieAcceptBtn

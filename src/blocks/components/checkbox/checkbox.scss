@@ -30,6 +30,10 @@
   &__input {
     display: none;
 
+    &.invalid + #{$self}__custom-input {
+      border: 2px solid #E21111;
+    }
+
     &:checked {
       + #{$self}__custom-input {
         &::before {
