@@ -11,10 +11,12 @@ gulp.task('serve', () => {
         notify: true
     });
 
-    gulp.watch(paths.views.watch, gulp.parallel('views'));
-    gulp.watch(paths.styles.watch, gulp.parallel('styles'));
-    gulp.watch(paths.scripts.watch, gulp.parallel('scripts'));
-    gulp.watch(paths.sprites.watch, gulp.parallel('sprites'));
-    gulp.watch(paths.images.watch, gulp.parallel('images'));
-    gulp.watch(paths.fonts.watch, gulp.parallel('fonts'));
+    const watchOpts = { usePolling: true, interval: 500 };
+
+    gulp.watch(paths.views.watch, watchOpts, gulp.parallel('views'));
+    gulp.watch(paths.styles.watch, watchOpts, gulp.parallel('styles'));
+    gulp.watch(paths.scripts.watch, watchOpts, gulp.parallel('scripts'));
+    gulp.watch(paths.sprites.watch, watchOpts, gulp.parallel('sprites'));
+    gulp.watch(paths.images.watch, watchOpts, gulp.parallel('images'));
+    gulp.watch(paths.fonts.watch, watchOpts, gulp.parallel('fonts'));
 });

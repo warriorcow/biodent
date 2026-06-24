@@ -95,7 +95,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    padding: 26px 0;
+    padding: 16px 0;
     z-index: 1;
 
     @include below(lg) {
@@ -125,8 +125,31 @@
 
   &__list-item {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: 3px 0;
+    justify-content: center;
     white-space: nowrap;
+
+    &--phones {
+      @include below(md) {
+        flex-direction: row;
+        gap: 0 30px;
+        margin-top: 13px;
+      }
+    }
+
+    &--socials {
+      flex-direction: row;
+      align-items: center;
+      gap: 0 20px;
+
+      @include below(md) {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 0 15px;
+        margin-top: 15px;
+      }
+    }
 
     a {
       &:hover {
@@ -165,6 +188,28 @@
     margin-right: 9px;
     width: 20px;
     height: 20px;
+    fill: $dirtyWhite;
+  }
+
+
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 31px;
+    height: 24px;
+
+    @include below(md) {
+      justify-content: flex-start;
+      height: 20px;
+      max-width: 25px;
+    }
+  }
+
+  &__social-icon {
+    width: auto;
+    height: 100%;
     fill: $dirtyWhite;
   }
 

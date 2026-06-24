@@ -19,14 +19,25 @@ mixin header(lists, navigations, without_logo)
                     .container
                         .header__list
                             each list in lists
-                                if list.icon
+                                if list.phones
+                                    .header__list-item.header__list-item--phones
+                                        each phone in list.phones
+                                            a.header__list-phone(href=`tel:${phone.text}`)
+                                                if phone.icon
+                                                    svg.header__list-icon
+                                                        use(href=phone.icon)
+                                                != phone.text
+                                else if list.socials
+                                    .header__list-item.header__list-item--socials
+                                        each social in list.socials
+                                            a.header__social(href=social.link target='_blank' rel='noopener noreferrer')
+                                                svg.header__social-icon
+                                                    use(href=social.icon)
+                                else if list.icon
                                     .header__list-item
                                         svg.header__list-icon
                                             use(href=list.icon)
-                                        if list.phone
-                                            a(href=`tel:${list.text}`)!= list.text
-                                        else
-                                            | #{list.text}
+                                        | #{list.text}
                                 else
                                     .header__list-item= list.text
                 .header__container.header__container--navigation
