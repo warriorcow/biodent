@@ -2,97 +2,11 @@ extends layouts/default
 include ../blocks/components/components
 
 block variables
+    include helpers/data
     - const title = "Главная | Биодент"
 
 block content
-    +header([
-        {
-            text: 'Екатеринбург, Крауля, 68'
-        },
-        {
-            text: 'пн | ср | пт - с 9:00 до 18:00'
-        },
-        {
-            text: 'вт | чт - с 9:00 до 20:00'
-        },
-        {
-            phones: [
-                {
-                    text: '+7 (343) 237-26-06'
-                },
-                {
-                    text: '+7 (982) 761-59-61'
-                }
-            ]
-        },
-        {
-            socials: [
-                {
-                    icon: 'img/sprites/sprite.svg#whatsapp',
-                    link: 'https://wa.me/79827615961'
-                },
-                {
-                    icon: 'img/sprites/sprite.svg#max',
-                    link: 'https://t.me/79827615961'
-                },
-                {
-                    icon: 'img/sprites/sprite.svg#vk',
-                    link: 'https://vk.com/biodent'
-                }
-            ]
-        }
-    ], [
-        {
-            name: 'Главная',
-            link: '/'
-        },
-        {
-            name: 'Услуги',
-            link: 'services.html',
-            nested: [
-                {
-                    name: 'Диагностика',
-                    link: 'service.html'
-                },
-                {
-                    name: 'Профилактика',
-                    link: 'service.html'
-                },
-                {
-                    name: 'Эстетика',
-                    link: 'service.html'
-                },
-                {
-                    name: 'Хирургия',
-                    link: 'service.html'
-                },
-                {
-                    name: 'Лечение',
-                    link: 'service.html'
-                },
-                {
-                    name: 'Протезирование',
-                    link: 'service.html'
-                },
-                {
-                    name: 'Детям',
-                    link: 'service.html'
-                }
-            ]
-        },
-        {
-            name: 'Прайс',
-            link: 'price.html'
-        },
-        {
-            name: 'О клинике',
-            link: 'about.html'
-        },
-        {
-            name: 'Контакты',
-            link: 'contacts.html'
-        }
-    ], true)
+    +header(headerLists, headerNavigation, true)
     include ../blocks/modules/banner/banner
     include ../blocks/modules/services/services
     include ../blocks/modules/about/about
